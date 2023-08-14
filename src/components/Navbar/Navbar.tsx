@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
-import './NavBar.css'
+import './Navbar.css'
 import Link from "next/link";
 
 const Links = () => {
