@@ -1,0 +1,49 @@
+.comp-button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  outline: none;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: var(--accent-ligth);
+  font-size: var(--normal);
+  text-transform: uppercase;
+  transition: all 400ms ease-in-out;
+  color: var(--dark-main);
+}
+
+.comp-button:nth-of-type(2) {
+  background-color: var(--ligth-main);
+}
+
+.comp-button a {
+  color: var(--dark-main);
+}
+
+.comp-button:hover {
+  box-shadow: 5px 5px var(--accent);
+  transition: all 400ms ease-in-out;
+  transform: scale(1.02);
+}
+
+.comp-button:nth-of-type(2):hover {
+  box-shadow: 5px 5px var(--clear-ligth);
+}
+
+.comp-button:hover svg {
+  animation: movement 600ms ease-in-out;
+}
+
+@keyframes movement {
+  50% {
+    rotate: 20deg;
+  }
+
+  100% {
+    rotate: -20deg;
+  }
+}
