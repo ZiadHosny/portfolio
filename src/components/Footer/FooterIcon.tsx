@@ -1,4 +1,9 @@
-import { FooterIconProps } from "../../utils/types"
+import { ReactNode } from "react";
+
+type FooterIconProps = {
+    href: string;
+    icon: ReactNode;
+}
 
 export const FooterIcon = ({ href, icon }: FooterIconProps) => {
     return (
