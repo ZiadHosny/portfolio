@@ -20,7 +20,7 @@ export const NotFound = () => {
       clearInterval(interval);
     };
 
-  }, [seconds]);
+  }, []);
 
   return (
     <div className="not-found">

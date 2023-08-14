@@ -58,3 +58,16 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-dark);
 }
+
+.heading {
+  color: var(--ligth-main);
+  font-size: var(--main-heading);
+  font-weight: 700;
+}
+
+.subheading {
+  color: var(--clear-ligth);
+  font-size: var(--sub-heading);
+  font-weight: 600;
+  margin-bottom: 10px;
+}

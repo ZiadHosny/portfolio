@@ -20,19 +20,6 @@
   letter-spacing: 0.5px;
 }
 
-.heading {
-  color: var(--ligth-main);
-  font-size: var(--main-heading);
-  font-weight: 700;
-}
-
-.subheading {
-  color: var(--clear-ligth);
-  font-size: var(--sub-heading);
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
 .buttons-container {
   display: flex;
   justify-content: flex-start;
