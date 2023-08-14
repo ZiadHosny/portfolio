@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { AiOutlineMail } from "react-icons/ai";
 import { HiOutlineDocumentText } from "react-icons/hi";
 import { ZButton } from "@/components/ZButton/ZButton";
-
+import './AboutMe.css';
 
 export default function AboutMe() {
   return (

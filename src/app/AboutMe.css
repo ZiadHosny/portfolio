@@ -39,3 +39,44 @@
   align-items: center;
   gap: 15px;
 }
+
+@media screen and (max-width: 970px) {
+
+  .aboutme-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .picture-container {
+    order: -1;
+    transform: scale(0.7) !important;
+  }
+
+  .about-me {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .aboutme-body {
+    text-align: center;
+    word-wrap: break-word;
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  aboutme-body {
+
+    background-color: aliceblue;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+  }
+}

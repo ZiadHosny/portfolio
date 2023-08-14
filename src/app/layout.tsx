@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { NavBar } from '@/components/Navbar/Navbar'
 import { Footer } from '@/components/Footer/Footer'
-import './AboutMe.css';
 import '@/styles/main.css'
 
 
