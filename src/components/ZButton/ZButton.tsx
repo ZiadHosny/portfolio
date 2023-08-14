@@ -63,7 +63,7 @@ export const ZButton = ({ content, direction, icon, document }: ButtonProps) => 
       <button
         className="comp-button"
         onClick={() => {
-          // document ? handleClickOpen() : null;
+          document ? handleClickOpen() : null;
         }}
       >
         {icon}
@@ -82,7 +82,7 @@ export const ZButton = ({ content, direction, icon, document }: ButtonProps) => 
         <DialogContent style={{ color: "var(--clear-white)" }}>
           <CustomDialogContentText id="alert-dialog-description">
             A new browser tab with my personal resume (.PDF) is about to open. Do you
-            want to procede?
+            want to continue?
           </CustomDialogContentText>
         </DialogContent>
         <DialogActions>
@@ -97,7 +97,7 @@ export const ZButton = ({ content, direction, icon, document }: ButtonProps) => 
             Yes!
           </CustomButtonMui>
         </DialogActions>
-      </Dialog>{" "}
+      </Dialog>
     </>
   );
 };

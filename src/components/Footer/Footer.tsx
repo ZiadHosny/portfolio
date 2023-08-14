@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <footer>
       <div className="contact-me">
-        <FooterIcon href="https://www.linkedin.com/in/ziadhosny" icon={<FaLinkedin />} />
+        {/* <FooterIcon href="https://www.linkedin.com/in/ziadhosny" icon={<FaLinkedin />} /> */}
         <FooterIcon href="https://github.com/ZiadHosny" icon={<FaGithubSquare />} />
         <FooterIcon href="https://leetcode.com/ZiadHosny/" icon={<SiLeetcode />} />
         <FooterIcon href="https://www.freecodecamp.org/ziadhosny" icon={<SiFreecodecamp />} />
@@ -15,7 +15,7 @@ export const Footer = () => {
         <FooterIcon href="https://codepen.io/ziadhosny" icon={<SiCodepen />} />
       </div>
       <div className="update-info">
-        <p>Last update: 03/10/2023</p>
+        <p>Last update: 15/08/2023</p>
       </div>
     </footer>
   );

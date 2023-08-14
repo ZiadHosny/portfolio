@@ -19,7 +19,8 @@ export const NotFound = () => {
       clearTimeout(timeout);
       clearInterval(interval);
     };
-  }, []);
+
+  }, [seconds]);
 
   return (
     <div className="not-found">
