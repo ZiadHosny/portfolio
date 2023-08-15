@@ -1,0 +1,24 @@
+.skills-card {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: max-content;
+    user-select: none;
+    color: var(--dark-main);
+    font-size: var(--small);
+    gap: 5px;
+    font-weight: 800;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.skills-card svg {
+    font-size: var(--medium);
+    transition: all 200ms ease;
+}
+
+.skills-card:hover svg {
+    transform: scale(1.2) rotate(-8deg);
+    transition: all 200ms ease;
+}
