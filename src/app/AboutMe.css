@@ -37,12 +37,18 @@
   }
 
   .picture-container {
+    transform: none !important;
+    margin-bottom: 10px;
+    height: 200px;
+    width: 200px;
     order: -1;
-    transform: scale(0.7) !important;
+  }
+
+  .picture-container img {
+    width: 120px;
   }
 
   .about-me {
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,18 +58,33 @@
   .aboutme-body {
     text-align: center;
     word-wrap: break-word;
-    width: 85%;
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 680px) {
+  .aboutme-container {
+    align-items: flex-start;
+  }
 
-  aboutme-body {
+  .about-me {
+    align-items: flex-start;
+  }
 
-    background-color: aliceblue;
+  .aboutme-body {
+    text-align: left;
   }
 
   .buttons-container {
-    flex-direction: column;
+    align-items: unset;
   }
+}
+
+@media screen and (max-width: 490px) {
+
+  .buttons-container {
+    flex-direction: column;
+    width: 74%;
+  }
+  
 }

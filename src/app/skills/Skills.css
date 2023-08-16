@@ -35,3 +35,49 @@
     row-gap: 10px;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 970px) {
+
+    .skills-container {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+
+    .all-skills-card-container {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skills-card-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skill {
+        justify-content: center;
+        align-items: center;
+        column-gap: 25px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+
+    .skills-container,
+    .all-skills-card-container {
+        align-items: flex-start;
+    }
+
+    .skills-card-container {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+
+    .skill {
+        justify-content: flex-start;
+        column-gap: 10px;
+    }
+}

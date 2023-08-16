@@ -41,3 +41,30 @@ footer {
 .update-info p {
   color: var(--accent-ligth);
 }
+
+@media screen and (max-width: 970px) {
+  .contact-me {
+    gap: 20px;
+  }
+
+  .contact-me {
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 490px) {
+
+  .contact-me {
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    gap: 10px;
+  }
+
+  .update-info {
+    align-self: center;
+    font-size: 12px;
+  }
+
+}

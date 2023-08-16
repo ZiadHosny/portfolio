@@ -7,7 +7,7 @@ export const Footer = () => {
   return (
     <footer>
       <div className="contact-me">
-        {/* <FooterIcon href="https://www.linkedin.com/in/ziadhosny" icon={<FaLinkedin />} /> */}
+        <FooterIcon href="https://www.linkedin.com/in/ziadhosny" icon={<FaLinkedin />} />
         <FooterIcon href="https://github.com/ZiadHosny" icon={<FaGithubSquare />} />
         <FooterIcon href="https://leetcode.com/ZiadHosny/" icon={<SiLeetcode />} />
         <FooterIcon href="https://www.freecodecamp.org/ziadhosny" icon={<SiFreecodecamp />} />
