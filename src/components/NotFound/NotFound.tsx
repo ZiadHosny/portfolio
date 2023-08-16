@@ -24,7 +24,7 @@ export const NotFound = () => {
 
   return (
     <div className="not-found">
-      <h1 className="heading">
+      <h1 className="heading heading-error">
         <BiMessageSquareError />
         Wrong URL
       </h1>

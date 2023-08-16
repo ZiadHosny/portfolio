@@ -77,7 +77,7 @@ export const ZButton = ({ content, direction, icon, document }: ButtonProps) => 
         aria-describedby="alert-dialog-description"
       >
         <CustomDialogTitle id="alert-dialog-title">
-          "Before you go"
+          Before you go
         </CustomDialogTitle>
         <DialogContent style={{ color: "var(--clear-white)" }}>
           <CustomDialogContentText id="alert-dialog-description">

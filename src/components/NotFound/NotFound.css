@@ -2,7 +2,6 @@
   margin: 130px auto;
 }
 
-
 .not-found p {
   color: var(--clear-white);
   font-size: var(--normal);
@@ -12,8 +11,23 @@
   letter-spacing: 0.5px;
 }
 
-/* .heading-error {
+.heading-error {
   display: flex;
   align-items: center;
   gap: 5px;
-} */
+}
+
+@media screen and (max-width: 970px) {
+
+  .not-found {
+    text-align: center;
+  }
+
+  .not-found p {
+    text-align: center;
+  }
+
+  .not-found .heading {
+    justify-content: center;
+  }
+}
