@@ -187,7 +187,7 @@ export const projects: Project[] = [
         deploy: "https://advancedaudioplayer.netlify.app/",
     }),
     createProject({
-        title: "Portfolio",
+        title: "portfolio",
         description: `My personal portfolio to show my progress,
          skills and my latest projects,
           You can contact with me through it`,
