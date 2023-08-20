@@ -40,7 +40,7 @@ export default function AboutMe() {
             Welcome to my portfolio!
           </p>
           <p>
-            I have 2+ years of Experience in Analyzing, Designing, Developing and Integrating Front-End & Back-End based applications. Experience in developing application using TypeScript, React, ReactNative, NodeJs, Express.
+            I have 2+ years of Experience in Analyzing, Designing, Developing and Integrating Front-End & Back-End based applications.
           </p>
           <p>
             Experience in developing application using TypeScript, React, ReactNative, NodeJs, Express. Seeking a role

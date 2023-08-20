@@ -9,11 +9,11 @@ export const Links = () => {
                     About me
                 </Link>
             </li>
-            <li className="item-list">
+            {/* <li className="item-list">
                 <Link href="/education" className="item-link">
                     Education
                 </Link>
-            </li>
+            </li> */}
             <li className="item-list">
                 <Link href="/skills" className="item-link">
                     Skills
