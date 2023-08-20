@@ -115,6 +115,14 @@ export const projects: Project[] = [
         ],
     }),
     createProject({
+        title: "Freshio",
+        description: "Freshio (Final ITI Project)",
+        icons: [
+            ...reactJs,
+            "axios"
+        ],
+    }),
+    createProject({
         title: "Advanced Audio Player",
         description: "Advanced Audio Player",
         icons: [
