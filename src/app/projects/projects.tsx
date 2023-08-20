@@ -1,6 +1,6 @@
 'use client'
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { ProjectsCard } from "@/components/projectsCard/ProjectsCard";
 import "./Projects.css";

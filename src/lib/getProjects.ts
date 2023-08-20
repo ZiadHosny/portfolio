@@ -63,7 +63,12 @@ export const projects: Project[] = [
     }),
     createProject({
         title: "Productly",
-        description: "Productly Responsive Landing Page (Static HTML Site)",
+        description: "Productly Responsive Landing Page (Static HTML Site) Task For ITI",
+        icons: htmlCssJs
+    }),
+    createProject({
+        title: "Thousand Sunny",
+        description: "Thousand Sunny Responsive Landing Page (Static HTML Site) Task For ITI",
         icons: htmlCssJs
     }),
     createProject({
