@@ -143,8 +143,8 @@ export const projects: Project[] = [
         icons: htmlCssJs
     }),
     createProject({
-        title: "Card game",
-        description: "Card game",
+        title: "Card Game",
+        description: "Card Game",
         icons: htmlCssJs,
         deploy: 'https://mem0ry-card.vercel.app/'
     }),
