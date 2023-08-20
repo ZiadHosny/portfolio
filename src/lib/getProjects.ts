@@ -52,6 +52,11 @@ const createProject = (
 
 export const projects: Project[] = [
     createProject({
+        title: "David Beckham",
+        description: "David Beckham Images",
+        icons: htmlCssJs
+    }),
+    createProject({
         title: "Personal",
         description: "Personal Template (Static Responsive HTML Site) Task For ITI",
         icons: htmlCssJs
