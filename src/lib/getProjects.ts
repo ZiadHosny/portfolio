@@ -141,6 +141,14 @@ export const projects: Project[] = [
         ],
     }),
     createProject({
+        title: "Netflix",
+        description: "Netflix App Use IMDB api",
+        icons: [
+            ...reactJs,
+            "axios"
+        ],
+    }),
+    createProject({
         title: "Freshio",
         description: "Freshio (Final ITI Project)",
         icons: [
