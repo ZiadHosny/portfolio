@@ -5,6 +5,9 @@ import {
     SiReact,
     SiTypescript,
     SiAxios,
+    SiNodedotjs,
+    SiMui,
+    SiPostgresql,
 } from "react-icons/si";
 import { TbBrandNextjs } from 'react-icons/tb'
 
@@ -15,7 +18,9 @@ const Css = <SiCss3 />
 const Html = <SiHtml5 />
 const Axios = <SiAxios />
 const Next = <TbBrandNextjs />
-
+const Node = <SiNodedotjs />
+const Mui = <SiMui />
+const Postgresql = <SiPostgresql/>
 
 
 const allIcons = [
@@ -47,6 +52,18 @@ const allIcons = [
         title: 'next',
         icon: Next
     },
+    {
+        title: 'node',
+        icon: Node
+    },
+    {
+        title: 'mui',
+        icon: Mui
+    },
+    {
+        title: 'ps',
+        icon: Postgresql
+    }
 ]
 
 

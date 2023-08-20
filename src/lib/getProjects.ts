@@ -28,6 +28,17 @@ const reactJs = [
     ...htmlCssJs
 ]
 
+const express = [
+    'node',
+    'express'
+]
+
+const next = [
+    'next',
+    'ts',
+    ...reactJs,
+]
+
 let id = 0
 
 const createProject = (
@@ -53,7 +64,7 @@ const createProject = (
 export const projects: Project[] = [
     createProject({
         title: "David Beckham",
-        description: "David Beckham Images",
+        description: "A Fake official website for the legend David Beckham with Album of his photos and a brief about his life",
         icons: htmlCssJs
     }),
     createProject({
@@ -102,6 +113,11 @@ export const projects: Project[] = [
         icons: htmlCssJs
     }),
     createProject({
+        title: "Analog-Clock",
+        description: "Analog Clock Build by just Css and Javascript (Task In iti)",
+        icons: htmlCssJs,
+    }),
+    createProject({
         title: "Robot",
         description: "Canvas Robot",
         icons: htmlCssJs
@@ -111,11 +127,6 @@ export const projects: Project[] = [
     //     description: "Task For Jonas Course",
     //     icons: reactJs
     // }),
-    createProject({
-        title: "Analog-Clock",
-        description: "Analog Clock Build by just Css and Javascript (Task In iti)",
-        icons: htmlCssJs,
-    }),
     createProject({
         title: "Unsplash Images",
         description: "Search For Unsplash Images Using Unsplash Api",
@@ -139,22 +150,26 @@ export const projects: Project[] = [
     }),
     createProject({
         title: "Advanced Audio Player",
-        description: "Advanced Audio Player",
+        description: `
+        Full project for playing audios and soundtracks,
+         Play audios randomly or on repeat,
+          with cool feature that makes you select a specific part of the audio and insert the number of times you want to play it,
+           login and make your favorite list`,
         icons: [
-            'react',
-            "ts",
-            "react",
-            'mui',
+            ...reactJs,
+            'ts',
+            ...express,
+            'ps'
         ],
         deploy: "https://advancedaudioplayer.netlify.app/",
     }),
     createProject({
-        title: "portfolio",
-        description: "My Portfolio",
+        title: "My portfolio",
+        description: `My personal portfolio to show my progress,
+         skills and my latest projects,
+          You can contact with me through it`,
         icons: [
-            'next',
-            "ts",
-            "react",
+            ...next,
             'mui',
         ],
         deploy: "https://ziadhosny.vercel.app/"
