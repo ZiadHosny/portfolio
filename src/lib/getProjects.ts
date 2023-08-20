@@ -129,7 +129,7 @@ export const projects: Project[] = [
     // }),
     createProject({
         title: "Unsplash Images",
-        description: "Search For Unsplash Images Using Unsplash Api",
+        description: "Search engine For Unsplash Images Using Unsplash Api",
         icons: [...reactJs, 'axios'],
     }),
     createProject({
