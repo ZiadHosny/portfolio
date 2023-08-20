@@ -82,6 +82,11 @@ export const projects: Project[] = [
         icons: htmlCssJs
     }),
     createProject({
+        title: "Landing Page",
+        description: "Landing Page Responsive Landing Page (Static HTML Site) FWD Task",
+        icons: htmlCssJs
+    }),
+    createProject({
         title: "Random Lines",
         description: "Canvas Random Lines",
         icons: htmlCssJs
