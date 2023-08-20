@@ -82,6 +82,11 @@ export const projects: Project[] = [
         icons: htmlCssJs
     }),
     createProject({
+        title: "NOICELAND",
+        description: "NOICELAND Responsive Landing Page (Static HTML Site) Task For ITI",
+        icons: htmlCssJs
+    }),
+    createProject({
         title: "Landing Page",
         description: "Landing Page Responsive Landing Page (Static HTML Site) FWD Task",
         icons: htmlCssJs
@@ -142,7 +147,6 @@ export const projects: Project[] = [
             'mui',
         ],
         deploy: "https://advancedaudioplayer.netlify.app/",
-
     }),
     createProject({
         title: "portfolio",
