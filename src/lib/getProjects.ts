@@ -93,6 +93,11 @@ export const projects: Project[] = [
         icons: htmlCssJs
     }),
     createProject({
+        title: "EdgeLedger",
+        description: "EdgeLedger Responsive Landing Page (Static HTML Site) Task For ITI",
+        icons: htmlCssJs
+    }),
+    createProject({
         title: "NOICELAND",
         description: "NOICELAND Responsive Landing Page (Static HTML Site) Task For ITI",
         icons: htmlCssJs
@@ -136,6 +141,12 @@ export const projects: Project[] = [
         title: "Robot",
         description: "Canvas Robot",
         icons: htmlCssJs
+    }),
+    createProject({
+        title: "Card game",
+        description: "Card game",
+        icons: htmlCssJs,
+        deploy: 'https://mem0ry-card.vercel.app/'
     }),
     // createProject({
     //     title: "Robo Friends",
