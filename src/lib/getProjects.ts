@@ -108,6 +108,11 @@ export const projects: Project[] = [
         icons: htmlCssJs
     }),
     createProject({
+        title: "Electric Circles",
+        description: "Canvas Electric Circles",
+        icons: htmlCssJs
+    }),
+    createProject({
         title: "O",
         description: "Canvas O",
         icons: htmlCssJs
