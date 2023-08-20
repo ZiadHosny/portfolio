@@ -25,9 +25,7 @@ const htmlCssJs = [
 
 const reactJs = [
     "react",
-    "js",
-    "css",
-    "html"
+    ...htmlCssJs
 ]
 
 let id = 0
@@ -52,7 +50,6 @@ const createProject = (
     }
 }
 
-
 export const projects: Project[] = [
     createProject({
         title: "Personal",
@@ -62,6 +59,11 @@ export const projects: Project[] = [
     createProject({
         title: "Alivio",
         description: "Alivio Responsive Landing Page (Static HTML Site)",
+        icons: htmlCssJs
+    }),
+    createProject({
+        title: "Productly",
+        description: "Productly Responsive Landing Page (Static HTML Site)",
         icons: htmlCssJs
     }),
     createProject({
@@ -75,12 +77,44 @@ export const projects: Project[] = [
         icons: htmlCssJs
     }),
     createProject({
+        title: "Robot",
+        description: "Canvas Robot",
+        icons: htmlCssJs
+    }),
+    // createProject({
+    //     title: "Robo Friends",
+    //     description: "Task For Jonas Course",
+    //     icons: reactJs
+    // }),
+    createProject({
+        title: "Analog-Clock",
+        description: "Analog Clock Build by just Css and Javascript (Task In iti)",
+        icons: htmlCssJs,
+    }),
+    createProject({
+        title: "Unsplash Images",
+        description: "Search For Unsplash Images Using Unsplash Api",
+        icons: [...reactJs, 'axios'],
+    }),
+    createProject({
         title: "My Reads",
         description: "Task For Udacity, Fwd",
         icons: [
             ...reactJs,
             "axios"
         ],
+    }),
+    createProject({
+        title: "Advanced Audio Player",
+        description: "Advanced Audio Player",
+        icons: [
+            'react',
+            "ts",
+            "react",
+            'mui',
+        ],
+        deploy: "https://advancedaudioplayer.netlify.app/",
+
     }),
     createProject({
         title: "portfolio",
@@ -94,42 +128,3 @@ export const projects: Project[] = [
         deploy: "https://ziadhosny.vercel.app/"
     }),
 ].reverse()
-
-
-const fdfs = [
-    {
-        id: 2,
-        title: "Analog-Clock",
-        description: "Analog Clock with Javascript (Task In iti)",
-        icons: htmlCssJs,
-        imagePath: `${imagesHost}/Clock.png`,
-
-        repository: `${githubRepos}/Analog-Clock`,
-        deploy: `${githubHost}/Analog-Clock/`
-    },
-    {
-        id: 3,
-        title: "Robo Friends",
-        description: "Task For Jonas Course",
-        icons: [
-            "react",
-            "javascript",
-            "css",
-            "tachyons",
-            "html"
-        ],
-        imagePath: `${imagesHost}/Robo-Friends.png`,
-
-        repository: `${githubHost}/RoboFriends`,
-        deploy: "https://ziadhosny.github.io/RoboFriends/"
-    },
-    {
-        id: 2,
-        title: "Unsplash Images",
-        description: "Search For Unsplash Images Using Unsplash Api",
-        icons: reactJs,
-        imagePath: `${imagesHost}/Unsplash-Images.png`,
-
-        repository: `${githubRepos}/Unsplash-Images`,
-        deploy: `${githubHost}/Unsplash-Images/`
-    },]
