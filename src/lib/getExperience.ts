@@ -1,5 +1,30 @@
 export const experienceData = [
     {
+        title: "BSC in Computers and Information",
+        courseType: "Bachelor of Computer Science",
+        place: "Mansoura University",
+        date: "08/2016 - 09/2020",
+        description:
+            `Graduated from the Computer Science department where I took my first step into programming,
+            I Enjoyed working with C++ and Practicing problem solving, Also, I have made many projects in javascript,
+            and I have learned about AI Like NLP, computer vision, and Neural network .
+            Graduation Project: Building a mobile learning app with a chatbot by Android, Java,
+            Python, and NLP.`,
+        certificateAvailable: false,
+    },
+    {
+        title: "Flutter Developer",
+        courseType: "Internship",
+        place: "Mega Trust Company",
+        date: "02/2022 - 03/2022",
+        description:
+            `Flutter Training to know how to be experienced flutter developer and write clean code
+             by using the best features and packages for state management and MVVM Architecture`,
+        certificateLink: "",
+        certificateAvailable: true,
+        certificateImage: "./certification/MegaTrust-Flutter.JPG",
+    },
+    {
         title: "Front-End & Cross-Platform Intensive Code Camp",
         courseType: "ITI scholarship",
         place: "Information Technology Institute",
@@ -11,7 +36,7 @@ export const experienceData = [
         also soft skills like communication skills,
         Teamwork, leadership, and presentation skills,
         with tons of projects and hard work to make the best use of the training
-        I was the team leader who designed and chose the best suitable solutions for the final project`,
+        I was the team leader who designed and choose the best suitable solutions for the final project`,
         certificateLink: "",
         certificateAvailable: true,
         certificateImage: "./certification/ITI.JPG",
@@ -22,7 +47,7 @@ export const experienceData = [
         description:
             `responsible for Creating And Developing a calendar for the clinic system by picking and rescheduling suitable dates for doctors' appointments.`,
         place: "e-Smart Company",
-        date: "08/2022 - 02/2023",
+        date: "12/2022 - 03/2023",
         certificateAvailable: false,
     },
     {
