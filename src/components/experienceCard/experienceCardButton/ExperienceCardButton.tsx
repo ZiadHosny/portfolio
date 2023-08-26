@@ -2,7 +2,7 @@ import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { GrCertificate } from "react-icons/gr";
 import { TbCertificateOff } from "react-icons/tb";
-import { EducationCertificate } from "../educationCertificate/EducationCertificate";
+import { ExperienceCertificate } from "../experienceCertificate/ExperienceCertificate";
 
 type LinkProp = {
   certificateLink: string;
@@ -35,7 +35,7 @@ export const ExperienceCardButton = ({
       </button>
       <AnimatePresence>
         {certificate ? (
-          <EducationCertificate
+          <ExperienceCertificate
             close={closeCertificate}
             image={certificateImage}
             link={certificateLink}
