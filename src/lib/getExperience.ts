@@ -56,7 +56,7 @@ export const experienceData = [
         title: "Front-end Developer",
         courseType: "Part Time (Hybrid)",
         description:
-            `responsible for Creating And Developing a calendar for the clinic system by picking and rescheduling suitable dates for doctors' appointments.`,
+            `Responsible for Creating And Developing a calendar for the clinic system by picking and rescheduling suitable dates for doctors' appointments.`,
         place: "e-Smart Company",
         date: "12/2022 - 03/2023",
         certificateAvailable: false,

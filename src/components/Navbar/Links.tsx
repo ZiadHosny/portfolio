@@ -24,6 +24,11 @@ export const Links = () => {
                     Projects
                 </Link>
             </li>
+            <li className="item-list">
+                <Link href="/certifications" className="item-link">
+                    Certifications
+                </Link>
+            </li>
         </ul>
     )
 }

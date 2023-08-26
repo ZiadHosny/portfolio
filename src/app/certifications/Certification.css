@@ -1,0 +1,34 @@
+.experience-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 20px;
+}
+
+@media screen and (max-width: 970px) {
+
+  .experience-container {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 680px) {
+
+  .cards-container {
+    overflow: auto;
+    padding: 0;
+  }
+
+  .experience-container {
+    align-items: flex-start;
+    height: auto;
+  }
+}
