@@ -22,7 +22,6 @@ export const ProjectsCard = ({
   repository,
 }: CardProps) => {
 
-  console.log(imagePath)
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}

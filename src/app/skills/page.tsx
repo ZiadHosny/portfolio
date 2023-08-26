@@ -9,7 +9,7 @@ import {
     frontEndData,
     programmingLanguagesData,
     toolsData,
-} from "@/lib/data";
+} from "@/lib/getSkills";
 
 
 const SkillsSection = ({ heading, data }: { heading: string, data: SkillType[] }) => {

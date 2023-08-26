@@ -11,16 +11,16 @@ import {
 } from "react-icons/si";
 import { TbBrandNextjs } from 'react-icons/tb'
 
-const React = <SiReact />
-const JavaScript = <SiJavascript />
-const TypeScript = <SiTypescript />
-const Css = <SiCss3 />
-const Html = <SiHtml5 />
-const Axios = <SiAxios />
-const Next = <TbBrandNextjs />
-const Node = <SiNodedotjs />
-const Mui = <SiMui />
-const Postgresql = <SiPostgresql />
+const React = <SiReact key={'react'} />
+const JavaScript = <SiJavascript key={'js'} />
+const TypeScript = <SiTypescript key={'ts'} />
+const Css = <SiCss3 key={'css'} />
+const Html = <SiHtml5 key={'html'} />
+const Axios = <SiAxios key={'axios'} />
+const Next = <TbBrandNextjs key={'next'} />
+const Node = <SiNodedotjs key={'node'} />
+const Mui = <SiMui key={'mui'} />
+const Postgresql = <SiPostgresql key={'postgresql'} />
 
 
 const allIcons = [
@@ -69,15 +69,15 @@ const allIcons = [
 
 export const Icons = ({ icons }: { icons: string[] }) => {
 
-    let filterdIcon: React.ReactNode[] = []
+    let filteredIcon: React.ReactNode[] = []
 
     allIcons.forEach(({ title, icon }) => {
         if (icons.includes(title))
-            filterdIcon.push(icon)
+            filteredIcon.push(icon)
     })
 
     return (
         <>
-            {filterdIcon}
+            {filteredIcon}
         </>)
 }
