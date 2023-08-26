@@ -24,7 +24,7 @@ export default function AboutMe() {
         <div className="buttons-container">
           <ZButton
             content="Resume"
-            direction={'./ZiadHosny.pdf'}
+            direction={'./ziadhosny.pdf'}
             icon={<HiOutlineDocumentText />}
             document={true}
           ></ZButton>
