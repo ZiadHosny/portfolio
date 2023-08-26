@@ -1,4 +1,17 @@
 export const experienceData = [
+
+    {
+        title: "Android Developer",
+        courseType: "Android Training (CCIC)",
+        place: "Mansoura University",
+        date: "07/2019 - 10/2019",
+        description:
+            `I learned Java Programming Language, OOP,
+             design patterns, solid principals, 
+             and how to build Android apps using JAVA`,
+        certificateAvailable: true,
+        certificateImage: "./certification/Consulting of Computers and Information Center - Java & Android.png",
+    },
     {
         title: "BSC in Computers and Information",
         courseType: "Bachelor of Computer Science",
@@ -20,7 +33,6 @@ export const experienceData = [
         description:
             `Flutter Training to know how to be experienced flutter developer and write clean code
              by using the best features and packages for state management and MVVM Architecture`,
-        certificateLink: "",
         certificateAvailable: true,
         certificateImage: "./certification/MegaTrust-Flutter.JPG",
     },
@@ -37,7 +49,6 @@ export const experienceData = [
         Teamwork, leadership, and presentation skills,
         with tons of projects and hard work to make the best use of the training
         I was the team leader who designed and choose the best suitable solutions for the final project`,
-        certificateLink: "",
         certificateAvailable: true,
         certificateImage: "./certification/ITI.JPG",
     },
