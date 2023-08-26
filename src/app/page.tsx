@@ -20,11 +20,11 @@ export default function AboutMe() {
         className="about-me"
       >
         <h1 className="heading">Ziad Hosny</h1>
-        <h2 className="subheading">Full-Stack Developr</h2>
+        <h2 className="subheading">Full-Stack Developer</h2>
         <div className="buttons-container">
           <ZButton
             content="Resume"
-            direction={'./ziadhosny.pdf'}
+            direction={'./ZiadHosny.pdf'}
             icon={<HiOutlineDocumentText />}
             document={true}
           ></ZButton>

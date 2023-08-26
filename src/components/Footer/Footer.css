@@ -56,7 +56,6 @@ footer {
 @media screen and (max-width: 490px) {
 
   .contact-me {
-    flex-direction: column;
     align-items: center;
     align-self: center;
     gap: 10px;

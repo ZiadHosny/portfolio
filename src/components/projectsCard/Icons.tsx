@@ -20,7 +20,7 @@ const Axios = <SiAxios />
 const Next = <TbBrandNextjs />
 const Node = <SiNodedotjs />
 const Mui = <SiMui />
-const Postgresql = <SiPostgresql/>
+const Postgresql = <SiPostgresql />
 
 
 const allIcons = [
