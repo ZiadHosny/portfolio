@@ -1,5 +1,5 @@
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
-import { SiLeetcode, SiFreecodecamp, SiHackerrank, SiCodepen, SiWhatsapp } from "react-icons/si";
+import { SiLeetcode, SiFreecodecamp, SiHackerrank, SiCodepen, SiWhatsapp, SiLinktree } from "react-icons/si";
 import { FooterIcon } from "./FooterIcon";
 import './Footer.css';
 
@@ -14,6 +14,7 @@ export const Footer = () => {
         <FooterIcon href="https://www.freecodecamp.org/ziadhosny" icon={<SiFreecodecamp size={25} />} />
         <FooterIcon href="https://www.hackerrank.com/ziadhosny" icon={<SiHackerrank size={25} />} />
         <FooterIcon href="https://codepen.io/ziadhosny" icon={<SiCodepen size={25} />} />
+        <FooterIcon href="https://linktr.ee/ziadhosny" icon={<SiLinktree size={25} />} />
       </div>
       <div className="update-info">
         <p>Last update: 15/08/2023</p>
