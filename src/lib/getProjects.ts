@@ -78,6 +78,11 @@ export const projects: Project[] = [
         icons: htmlCssJs
     }),
     createProject({
+        title: "Hotel Website",
+        description: "Hotel Website Responsive Landing Page (Static HTML Site)",
+        icons: htmlCssJs
+    }),
+    createProject({
         title: "Trafalgar",
         description: "Trafalgar Responsive Landing Page (Static HTML Site) Task For ITI",
         icons: htmlCssJs
@@ -143,16 +148,21 @@ export const projects: Project[] = [
         icons: htmlCssJs
     }),
     createProject({
+        title: "Pomodoro Timer",
+        description: "Pomodoro Timer Task In ITI",
+        icons: htmlCssJs,
+    }),
+    createProject({
+        title: "Task Manager",
+        description: "Task Manager (Local Storage) Task In ITI",
+        icons: htmlCssJs,
+    }),
+    createProject({
         title: "Card Game",
         description: "Card Game",
         icons: htmlCssJs,
         deploy: 'https://mem0ry-card.vercel.app/'
     }),
-    // createProject({
-    //     title: "Robo Friends",
-    //     description: "Task For Jonas Course",
-    //     icons: reactJs
-    // }),
     createProject({
         title: "Unsplash Images",
         description: "Search engine For Unsplash Images Using Unsplash Api",
