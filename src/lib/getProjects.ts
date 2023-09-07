@@ -208,6 +208,17 @@ export const projects: Project[] = [
         deploy: "https://advancedaudioplayer.netlify.app/",
     }),
     createProject({
+        title: "Pro Shop",
+        description: `
+       ProShop eCommerce Platform`,
+        icons: [
+            ...reactJs,
+            ...express,
+            'mongodb'
+        ],
+        deploy: "https://pro-shop-z.vercel.app/",
+    }),
+    createProject({
         title: "portfolio",
         description: `My personal portfolio to show my progress,
          skills and my latest projects,
