@@ -1,3 +1,5 @@
+import { cloudinary } from "./getImages";
+
 type Certification = {
     title: string;
     courseType: string;
@@ -76,7 +78,7 @@ export const certifications: Certification[] = [
         place: "Online",
         date: "08/2022",
         certificateAvailable: true,
-        certificateImage: "./certification/javascript_basic certificate.png",
+        certificateImage: `${cloudinary}/v1695462880/Certifications/HackerRank/javascript_basic_certificate_qpffng.png`,
         certificateLink: "https://www.hackerrank.com/certificates/150b23da9a18"
     },
     {
@@ -85,7 +87,7 @@ export const certifications: Certification[] = [
         place: "Online",
         date: "08/2022",
         certificateAvailable: true,
-        certificateImage: "./certification/react_basic certificate.png",
+        certificateImage: `${cloudinary}/v1695462963/Certifications/HackerRank/react_basic_certificate_akykwl.png`,
         certificateLink: "https://www.hackerrank.com/certificates/240ca2891d46"
     },
     {
@@ -94,7 +96,7 @@ export const certifications: Certification[] = [
         place: "Online",
         date: "08/2022",
         certificateAvailable: true,
-        certificateImage: "./certification/problem_solving_basic certificate.png",
+        certificateImage: `${cloudinary}/v1695462873/Certifications/HackerRank/problem_solving_basic_certificate_nggpyh.png`,
         certificateLink: "https://www.hackerrank.com/certificates/a3fb40835128"
     },
     {
@@ -103,7 +105,16 @@ export const certifications: Certification[] = [
         place: "Online",
         date: "09/2022",
         certificateAvailable: true,
-        certificateImage: "./certification/javascript_intermediate certificate.png",
+        certificateImage: `${cloudinary}/v1695462867/Certifications/HackerRank/javascript_intermediate_certificate_hyduus.png`,
         certificateLink: "https://www.hackerrank.com/certificates/a8db3bcdddae"
+    },
+    {
+        title: "NodeJs (Intermediate)",
+        courseType: "HackerRank",
+        place: "Online",
+        date: "09/2023",
+        certificateAvailable: true,
+        certificateImage: `${cloudinary}/v1695462878/Certifications/HackerRank/nodejs_intermediate_certificate_qypwwn.png`,
+        certificateLink: "https://www.hackerrank.com/certificates/e87ef0597dd9"
     },
 ].reverse();

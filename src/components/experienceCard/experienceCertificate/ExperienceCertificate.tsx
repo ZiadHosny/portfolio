@@ -13,13 +13,13 @@ type CertificateProps = {
 
 export const ExperienceCertificate = ({ close, image, link }: CertificateProps) => {
   const [loading, setLoading] = useState<boolean>(true);
-  const second: number = 1000;
+  const second: number = 0;
   window.scrollTo(0, 0);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, second * 2);
+    }, second);
   }, []);
 
   return (
