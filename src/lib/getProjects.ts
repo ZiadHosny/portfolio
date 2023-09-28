@@ -1,3 +1,5 @@
+import { cloudinary } from "./getImages"
+
 type Project = {
     id: number,
     title: string,
@@ -42,8 +44,8 @@ const next = [
 let id = 0
 
 const createProject = (
-    { title, description, icons, deploy }:
-        { title: string, description: string, icons: string[], deploy?: string }): Project => {
+    { title, description, icons, deploy, imagePath, }:
+        { title: string, description: string, icons: string[], deploy?: string, imagePath?: string, }): Project => {
 
     id++;
 
@@ -55,7 +57,7 @@ const createProject = (
         title,
         description,
         icons,
-        imagePath: `${imagesHost}/${repoTitle}.png`,
+        imagePath: imagePath ? `${cloudinary}/${imagePath}` : `${imagesHost}/${repoTitle}.png`,
         repository: `${githubRepos}/${repoTitle}`,
         deploy: deployUrl,
     }
@@ -115,7 +117,8 @@ export const projects: Project[] = [
     createProject({
         title: "Random Lines",
         description: "Canvas Random Lines",
-        icons: htmlCssJs
+        icons: htmlCssJs,
+        imagePath: 'v1694339279/projects/Random-Lines.png'
     }),
     createProject({
         title: "Electric Circles",
@@ -185,6 +188,18 @@ export const projects: Project[] = [
         ],
     }),
     createProject({
+        title: "Task Manger App",
+        description: `MERN Task Manger App`,
+        icons: [
+            ...reactJs,
+            ...express,
+            'ts',
+            'mui',
+        ],
+        imagePath: 'v1695919424/projects/Task-Manger-App.png',
+        deploy: "https://task-manger-z.vercel.app/"
+    }),
+    createProject({
         title: "Freshio",
         description: "Freshio (Final ITI Project)",
         icons: [
@@ -216,6 +231,7 @@ export const projects: Project[] = [
             ...express,
             'mongodb'
         ],
+        imagePath: 'v1695920466/projects/pro-shop_kwlain.png',
         deploy: "https://pro-shop-z.vercel.app/",
     }),
     createProject({

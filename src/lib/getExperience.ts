@@ -1,5 +1,6 @@
-export const experienceData = [
+import { cloudinary } from "./getImages";
 
+export const experienceData = [
     {
         title: "Android Developer",
         courseType: "Android Training (CCIC)",
@@ -10,7 +11,7 @@ export const experienceData = [
              design patterns, solid principals, 
              and how to build Android apps using JAVA`,
         certificateAvailable: true,
-        certificateImage: "./certification/Consulting of Computers and Information Center - Java & Android.png",
+        certificateImage: `${cloudinary}/v1695465690/Certifications/Consulting_of_Computers_and_Information_Center_-_Java_Android_sfcwa1.png`,
     },
     {
         title: "BSC in Computers and Information",
@@ -34,7 +35,7 @@ export const experienceData = [
             `Flutter Training to know how to be experienced flutter developer and write clean code
              by using the best features and packages for state management and MVVM Architecture`,
         certificateAvailable: true,
-        certificateImage: "./certification/MegaTrust-Flutter.JPG",
+        certificateImage: `${cloudinary}/v1695465693/Certifications/MegaTrust-Flutter_xevlcw.jpg`,
     },
     {
         title: "Front-End & Cross-Platform Intensive Code Camp",
@@ -50,7 +51,7 @@ export const experienceData = [
         with tons of projects and hard work to make the best use of the training
         I was the team leader who designed and choose the best suitable solutions for the final project`,
         certificateAvailable: true,
-        certificateImage: "./certification/ITI.JPG",
+        certificateImage: `${cloudinary}/v1695465692/Certifications/ITI_zq9prq.jpg`,
     },
     {
         title: "Front-end Developer",
