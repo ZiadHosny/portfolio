@@ -186,6 +186,7 @@ export const projects: Project[] = [
             ...reactJs,
             "axios"
         ],
+        imagePath: 'v1696070899/projects/Netflix_xtcbi7.png',
     }),
     createProject({
         title: "Task Manger App",
