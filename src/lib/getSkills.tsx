@@ -29,6 +29,7 @@ import {
     SiStyledcomponents,
     SiTailwindcss,
     SiTypescript,
+    SiGithubactions
 } from "react-icons/si";
 
 import { TbBrandNextjs } from 'react-icons/tb'
@@ -101,6 +102,7 @@ export const toolsData: SkillType[] = [
     createIcon({ id: 8, icon: <SiPostman />, name: "Postman" }),
     createIcon({ id: 1, icon: <SiGit />, name: "Git" }),
     createIcon({ id: 2, icon: <SiGithub />, name: "GitHub" }),
+    createIcon({ id: 9, icon: <SiGithubactions />, name: "GitHub Actions" }),
     createIcon({ id: 3, icon: <SiGitlab />, name: "Gitlab" }),
     createIcon({ id: 4, icon: <SiNpm />, name: "NPM" }),
     createIcon({ id: 5, icon: <SiFigma />, name: "Figma" }),
