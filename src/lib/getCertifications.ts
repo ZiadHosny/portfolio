@@ -135,4 +135,22 @@ export const certifications: Certification[] = [
         certificateImage: `v1695462878/Certifications/HackerRank/nodejs_intermediate_certificate_qypwwn.png`,
         certificateLink: "https://www.hackerrank.com/certificates/e87ef0597dd9"
     },
+    {
+        title: "Software Engineer Intern",
+        courseType: "HackerRank",
+        place: "Online",
+        date: "11/2023",
+        certificateAvailable: true,
+        certificateImage: `v1700034727/Certifications/HackerRank/software_engineer_intern_certificate_n3mi9v.png`,
+        certificateLink: "https://www.hackerrank.com/certificates/141db3418060"
+    },
+    {
+        title: "Rest Api (Intermediate)",
+        courseType: "HackerRank",
+        place: "Online",
+        date: "11/2023",
+        certificateAvailable: true,
+        certificateImage: `v1700034725/Certifications/HackerRank/rest_api_intermediate_certificate_pkj0qr.png`,
+        certificateLink: "https://www.hackerrank.com/certificates/dcb8d7a7a57a"
+    },
 ].reverse().map((e) => ({ ...e, certificateImage: `${cloudinary}/${e.certificateImage}` }));
