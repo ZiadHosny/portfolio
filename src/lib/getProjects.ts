@@ -189,6 +189,17 @@ export const projects: Project[] = [
         imagePath: 'v1696070899/projects/Netflix_xtcbi7.png',
     }),
     createProject({
+        title: "Sara7a",
+        description: `Sara7a App `,
+        icons: [
+            ...reactJs,
+            ...express,
+            'ts',
+        ],
+        imagePath: 'v1702975988/projects/Sara7a-App_ht95x3.png',
+        deploy: "https://sara7a-z.vercel.app/"
+    }),
+    createProject({
         title: "Task Manger App",
         description: `MERN Task Manger App`,
         icons: [

@@ -145,6 +145,15 @@ export const certifications: Certification[] = [
         certificateLink: "https://www.hackerrank.com/certificates/141db3418060"
     },
     {
+        title: "Frontend (React)",
+        courseType: "HackerRank",
+        place: "Online",
+        date: "11/2023",
+        certificateAvailable: true,
+        certificateImage: `v1702976791/Certifications/HackerRank/frontend_react_certificate_ne5aa6.png`,
+        certificateLink: "https://www.hackerrank.com/certificates/7310148f9e45"
+    },
+    {
         title: "Rest Api (Intermediate)",
         courseType: "HackerRank",
         place: "Online",
