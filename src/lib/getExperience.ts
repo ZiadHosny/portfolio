@@ -2,7 +2,7 @@ import { cloudinary } from "./getImages";
 
 export const experienceData = [
     {
-        title: "Android Developer",
+        title: "Androidd Developer",
         courseType: "Android Training (CCIC)",
         place: "Mansoura University",
         date: "07/2019 - 10/2019",
