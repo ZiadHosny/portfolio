@@ -2,8 +2,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   overflow: hidden;
   box-shadow: inset 0px -15px var(--accent-ligth);
@@ -13,7 +13,8 @@
 }
 
 .picture-container img {
-  width: 195px;
+  width: 250px;
+  margin-bottom: -50px;
   height: auto;
   transform: translateY(15px) scale(1);
   transition: all 400ms ease;

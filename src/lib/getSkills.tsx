@@ -29,7 +29,8 @@ import {
     SiStyledcomponents,
     SiTailwindcss,
     SiTypescript,
-    SiGithubactions
+    SiGithubactions,
+    SiJest
 } from "react-icons/si";
 
 import { TbBrandNextjs } from 'react-icons/tb'
@@ -77,6 +78,7 @@ export const frontEndData: SkillType[] = [
     createIcon({ id: 4, icon: <SiHtml5 />, name: "HTML" }),
     createIcon({ id: 3, icon: <SiCss3 />, name: "CSS" }),
     createIcon({ id: 4, icon: <SiMui />, name: "MaterialUI" }),
+    createIcon({ id: 5, icon: <SiJest />, name: "Jest" }),
     createIcon({ id: 3, icon: <SiChakraui />, name: "Chakra UI" }),
     createIcon({ id: 4, icon: <SiStyledcomponents />, name: "StyledComponents" }),
     createIcon({ id: 3, icon: <SiBootstrap />, name: "Bootstrap" }),

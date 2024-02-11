@@ -4,6 +4,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { HiOutlineDocumentText } from "react-icons/hi";
 import { ZButton } from "@/components/ZButton/ZButton";
 import './AboutMe.css';
+import { ProfilePicture } from "@/components/profilePicture/ProfilePicture";
 
 export default function AboutMe() {
   return (
@@ -52,7 +53,7 @@ export default function AboutMe() {
           </p>
         </main>
       </motion.div>
-      {/* <ProfilePicture /> */}
+      <ProfilePicture />
     </motion.div>
   );
 };

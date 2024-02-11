@@ -9,7 +9,7 @@ export const ProfilePicture = () => {
       transition={{ duration: 0.4 }}
       className="picture-container"
     >
-      <img src={'/'} alt="avatar" draggable="false"></img>
+      <img src={'Zi.png'} alt="avatar" draggable="false"></img>
     </motion.div>
   );
 };
