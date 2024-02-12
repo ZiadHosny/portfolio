@@ -7,8 +7,8 @@ import "./ExperienceCertificate.css";
 
 type CertificateProps = {
   close: any;
-  image: string;
-  link: string;
+  image?: string;
+  link?: string;
 };
 
 export const ExperienceCertificate = ({ close, image, link }: CertificateProps) => {

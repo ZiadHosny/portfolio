@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { ExperienceCard } from "@/components/experienceCard/ExperienceCard";
-import { certifications } from "@/lib/getCertifications";
+import { CertificationType, certifications } from "@/lib/data/Certifications";
 import "./Certification.css";
 
 export const Certification = () => {
@@ -27,8 +27,8 @@ export const Certification = () => {
                 <h1 className="heading" > My Certification </h1>
                 < div className="cards-container" >
                     {
-                        slicedArray.map((props: any) => (
-                            <ExperienceCard {...props} key={crypto.randomUUID()} />
+                        slicedArray.map((props: CertificationType) => (
+                            <ExperienceCard {...props} key={props.id} />
                         ))
                     }
                 </div>

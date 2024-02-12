@@ -5,12 +5,12 @@
   width: 100%;
   padding: 20px;
   border-radius: 20px;
-  border: 1px solid var(--clear-ligth);
+  border: 1px solid var(--clear-light);
   transition: all 200ms ease;
 }
 
 .study-card:hover {
-  border: 1px solid var(--accent-ligth);
+  border: 1px solid var(--accent-light);
   transition: all 200ms ease;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .card-info {
-  color: var(--ligth-main);
+  color: var(--light-main);
 }
 
 .card-description {
@@ -41,7 +41,7 @@
   border: none;
   width: max-content;
   padding: 4px 10px;
-  background-color: var(--ligth-main);
+  background-color: var(--light-main);
   font-size: var(--small);
   text-transform: uppercase;
   font-weight: 600;
@@ -68,7 +68,7 @@
 }
 
 .certificate-button:hover {
-  box-shadow: 5px 5px var(--clear-ligth);
+  box-shadow: 5px 5px var(--clear-light);
   transition: all 200ms ease;
   transform: scale(1.03);
 }

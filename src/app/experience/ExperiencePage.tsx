@@ -3,16 +3,17 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { ExperienceCard } from "@/components/experienceCard/ExperienceCard";
-import { experienceData } from "@/lib/getExperience";
+import { ExperienceType } from "@/lib/utils/Experience";
 import "./Experience.css";
+import { experiences } from "@/lib/data/Experiences";
 
 export const Experience = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const cardsPerPage = 2;
-  const totalPages = Math.ceil(experienceData.length / cardsPerPage);
+  const totalPages = Math.ceil(experiences.length / cardsPerPage);
   const lasIndex = currentPage * cardsPerPage;
   const firstIndex = lasIndex - cardsPerPage;
-  const slicedArray = experienceData.slice(firstIndex, lasIndex);
+  const slicedArray = experiences.slice(firstIndex, lasIndex);
 
   return (
     <AnimatePresence>
@@ -27,8 +28,8 @@ export const Experience = () => {
         <h1 className="heading" > My experience </h1>
         < div className="cards-container" >
           {
-            slicedArray.map((props: any) => (
-              <ExperienceCard {...props} key={crypto.randomUUID()} />
+            slicedArray.map((props: ExperienceType) => (
+              <ExperienceCard {...props} key={props.id} />
             ))
           }
         </div>

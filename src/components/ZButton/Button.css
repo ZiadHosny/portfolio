@@ -9,7 +9,7 @@
   padding: 5px 12px;
   border-radius: 5px;
   font-weight: 600;
-  background-color: var(--accent-ligth);
+  background-color: var(--accent-light);
   font-size: var(--normal);
   text-transform: uppercase;
   transition: all 400ms ease-in-out;
@@ -17,7 +17,7 @@
 }
 
 .comp-button:nth-of-type(2) {
-  background-color: var(--ligth-main);
+  background-color: var(--light-main);
 }
 
 .comp-button a {
@@ -31,7 +31,7 @@
 }
 
 .comp-button:nth-of-type(2):hover {
-  box-shadow: 5px 5px var(--clear-ligth);
+  box-shadow: 5px 5px var(--clear-light);
 }
 
 .comp-button:hover svg {

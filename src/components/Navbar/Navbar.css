@@ -34,7 +34,7 @@
     display: none;
     position: absolute;
     background-color: var(--dark-main);
-    border: 2px solid var(--clear-ligth);
+    border: 2px solid var(--clear-light);
     padding: 60px 20px 60px 20px;
     margin-top: 10px;
     border-radius: 10px;
@@ -72,7 +72,7 @@ header {
 }
 
 .item-link {
-    color: var(--ligth-main);
+    color: var(--light-main);
     font-size: var(--normal);
     font-weight: 600;
     letter-spacing: 1px;
@@ -86,23 +86,23 @@ header {
     bottom: -4px;
     height: 2px;
     width: 40%;
-    background-color: var(--accent-ligth);
+    background-color: var(--accent-light);
     transition: all 200ms ease;
 }
 
 .item-link:hover {
-    color: var(--accent-ligth);
+    color: var(--accent-light);
     transition: all 150ms ease-in-out;
 }
 
 .item-link:hover::before {
-    background-color: var(--ligth-main);
+    background-color: var(--light-main);
     width: 100%;
     transition: all 200ms ease;
 }
 
 .active {
-    color: var(--accent-ligth);
+    color: var(--accent-light);
 }
 
 .active::before {
@@ -110,7 +110,7 @@ header {
 }
 
 .active:hover::before {
-    background-color: var(--accent-ligth);
+    background-color: var(--accent-light);
 }
 
 

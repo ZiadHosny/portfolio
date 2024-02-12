@@ -6,7 +6,7 @@ type CardProps = {
     icon: React.ReactNode;
     name: string;
     mainColor: string;
-    ligthColor: string;
+    lightColor: string;
     index: number;
 };
 
@@ -14,12 +14,12 @@ export const SkillsCard = ({
     icon,
     name,
     mainColor,
-    ligthColor,
+    lightColor,
     index,
 }: CardProps) => {
     let colorStyles = {
         backgroundColor: `${mainColor}`,
-        boxShadow: `15px 0px ${ligthColor}`,
+        boxShadow: `15px 0px ${lightColor}`,
     };
 
     return (

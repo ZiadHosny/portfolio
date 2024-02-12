@@ -1,17 +1,7 @@
 import { motion } from "framer-motion";
 import "./ExperienceCard.css";
 import { ExperienceCardButton } from "./experienceCardButton/ExperienceCardButton";
-
-type CardProps = {
-  title: string;
-  courseType: string;
-  description: string;
-  place: string;
-  date: string;
-  certificateLink: string;
-  certificateAvailable: boolean;
-  certificateImage: string;
-};
+import { CertificationType } from "@/lib/data/Certifications";
 
 export const ExperienceCard = ({
   title,
@@ -22,7 +12,7 @@ export const ExperienceCard = ({
   certificateLink,
   certificateAvailable,
   certificateImage,
-}: CardProps) => {
+}: CertificationType) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}

@@ -17,7 +17,7 @@ export const Footer = () => {
         <FooterIcon href="https://linktr.ee/ziadhosny" icon={<SiLinktree size={25} />} />
       </div>
       <div className="update-info">
-        <p>Last update: 15/08/2023</p>
+        <p>Last update: 11/02/2024</p>
       </div>
     </footer>
   );

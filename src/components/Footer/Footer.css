@@ -16,7 +16,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 40px;
-  color: var(--clear-ligth);
+  color: var(--clear-light);
   align-self: center;
 }
 
@@ -25,12 +25,12 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 5px;
-  color: var(--clear-ligth);
+  color: var(--clear-light);
   transition: color 200ms ease-in;
 }
 
 .contact-link:hover {
-  color: var(--ligth-main);
+  color: var(--light-main);
   transition: color 200ms ease-in;
 }
 
@@ -39,7 +39,7 @@ footer {
 }
 
 .update-info p {
-  color: var(--accent-ligth);
+  color: var(--accent-light);
 }
 
 @media screen and (max-width: 970px) {

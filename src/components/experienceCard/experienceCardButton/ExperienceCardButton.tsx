@@ -5,9 +5,9 @@ import { TbCertificateOff } from "react-icons/tb";
 import { ExperienceCertificate } from "../experienceCertificate/ExperienceCertificate";
 
 type LinkProp = {
-  certificateLink: string;
-  certificateAvailable: boolean;
-  certificateImage: string;
+  certificateLink?: string;
+  certificateAvailable?: boolean;
+  certificateImage?: string;
 };
 
 export const ExperienceCardButton = ({

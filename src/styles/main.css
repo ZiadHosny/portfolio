@@ -61,13 +61,13 @@ a {
 /* heading And Subheading */
 
 .heading {
-  color: var(--ligth-main);
+  color: var(--light-main);
   font-size: var(--main-heading);
   font-weight: 700;
 }
 
 .subheading {
-  color: var(--clear-ligth);
+  color: var(--clear-light);
   font-size: var(--sub-heading);
   font-weight: 600;
   margin-bottom: 10px;
@@ -96,7 +96,7 @@ a {
 }
 
 .controllers button:hover {
-  background-color: var(--accent-ligth);
+  background-color: var(--accent-light);
   transition: all 150ms ease-in;
 }
 
@@ -107,13 +107,13 @@ a {
 
 /*  card-heading And card-subheading */
 .card-heading {
-  color: var(--accent-ligth);
+  color: var(--accent-light);
   font-size: var(--sub-heading);
   font-weight: 700;
 }
 
 .card-subheading {
-  color: var(--accent-ligth);
+  color: var(--accent-light);
   font-size: var(--medium);
   font-weight: 500;
 }

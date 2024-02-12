@@ -30,11 +30,11 @@ const CustomDialogContentText = styled(DialogContentText)`
 
 const CustomButtonMui = styled(ButtonMui)`
   font-family: "Raleway", sans-serif;
-  color: var(--accent-ligth);
+  color: var(--accent-light);
   font-weight: 700;
   :hover {
     color: var(--dark-main);
-    background-color: var(--accent-ligth);
+    background-color: var(--accent-light);
   }
 `;
 

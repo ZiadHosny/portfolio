@@ -4,7 +4,8 @@ import { useState } from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { ProjectsCard } from "@/components/projectsCard/ProjectsCard";
 import "./Projects.css";
-import { projects } from "@/lib/getProjects";
+import { projects, } from "@/lib/data/projects";
+import { Project } from "@/lib/utils/Project";
 
 export const Projects = () => {
 
@@ -26,8 +27,8 @@ export const Projects = () => {
         >
             <h1 className="heading">My projects</h1>
             <div className="projects-container">
-                {slicedArray?.map((props: any) => (
-                    <ProjectsCard {...props} key={crypto.randomUUID()} />
+                {slicedArray?.map((props: Project) => (
+                    <ProjectsCard {...props} key={props.id} />
                 ))}
             </div>
             <div className="controllers">

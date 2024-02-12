@@ -2,23 +2,17 @@
 import { motion } from "framer-motion";
 import { SkillsCard } from "@/components/skillsCard/SkillsCard"
 import "./Skills.css";
-
-import {
-    SkillType,
-    backendData,
-    frontEndData,
-    programmingLanguagesData,
-    toolsData,
-} from "@/lib/getSkills";
+import { backendData, frontEndData, programmingLanguagesData, toolsData } from "@/lib/data/Skills";
+import { Skill } from "@/lib/utils/Skill";
 
 
-const SkillsSection = ({ heading, data }: { heading: string, data: SkillType[] }) => {
+const SkillsSection = ({ heading, data }: { heading: string, data: Skill[] }) => {
     return (
         <div className="skills-card-container">
             <h2 className="category-heading">{heading}</h2>
             <div className="skill">
                 {data.map((props, index) => (
-                    <SkillsCard {...props} index={index} key={crypto.randomUUID()} />
+                    <SkillsCard {...props} index={index} key={props.id} />
                 ))}
             </div>
         </div>

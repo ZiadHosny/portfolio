@@ -2,7 +2,7 @@
   display: flex;
   justify-content: flex-start;
   gap: 20px;
-  border: 1px solid var(--ligth-main);
+  border: 1px solid var(--light-main);
   border-radius: 20px;
   width: 100%;
   padding: 20px;
@@ -10,7 +10,7 @@
 }
 
 .project:hover {
-  border: 1px solid var(--accent-ligth);
+  border: 1px solid var(--accent-light);
   transition: all 200ms ease;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .techs-used svg {
-  color: var(--ligth-main);
+  color: var(--light-main);
 }
 
 .go-to {
@@ -62,7 +62,7 @@
   align-items: center;
   border: none;
   gap: 5px;
-  background-color: var(--accent-ligth);
+  background-color: var(--accent-light);
   color: var(--dark-main);
   font-size: var(--small);
   text-transform: uppercase;
@@ -88,7 +88,7 @@
 }
 
 .repository-btn {
-  background-color: var(--ligth-main);
+  background-color: var(--light-main);
 }
 
 .deploy-btn:hover {
@@ -96,7 +96,7 @@
 }
 
 .repository-btn:hover {
-  box-shadow: 5px 5px var(--clear-ligth);
+  box-shadow: 5px 5px var(--clear-light);
 }
 
 .repository-btn svg {

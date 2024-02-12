@@ -24,7 +24,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--dark-main);
-  border: 2px solid var(--ligth-main);
+  border: 2px solid var(--light-main);
   border-radius: 15px;
 }
 
@@ -33,16 +33,16 @@
   position: absolute;
   top: 13px;
   right: 13px;
-  color: var(--ligth-main);
+  color: var(--light-main);
   font-size: 30px;
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid var(--ligth-main);
+  border: 1px solid var(--light-main);
   transition: all 200ms ease;
 }
 
 .certificate-close:hover {
-  background-color: var(--ligth-main);
+  background-color: var(--light-main);
   color: var(--dark-main);
   transition: all 200ms ease;
 }
@@ -59,12 +59,12 @@
   justify-content: center;
   align-items: center;
   gap: 5px;
-  color: var(--ligth-main);
+  color: var(--light-main);
   transition: all 200ms ease-in-out;
 }
 
 .certificate-link:hover {
-  color: var(--clear-ligth);
+  color: var(--clear-light);
   transition: all 200ms ease-in-out;
 }
 
