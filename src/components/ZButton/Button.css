@@ -14,6 +14,7 @@
   text-transform: uppercase;
   transition: all 400ms ease-in-out;
   color: var(--dark-main);
+  width: 100%;
 }
 
 .comp-button:nth-of-type(2) {

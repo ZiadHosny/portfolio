@@ -37,7 +37,7 @@ body {
 
 
 #root {
-    @apply flex flex-col sm:gap-[80px] gap-[35px] min-w-[280px] w-[1000px] max-w-[1000px] py-[30px] px-[15px] my-0 mx-[20px] overflow-x-hidden justify-start items-start;
+    @apply flex flex-col sm:gap-[50px] gap-[35px] min-w-[280px] w-[1000px] max-w-[1000px] py-[30px] px-[15px] my-0 mx-[20px] overflow-x-hidden justify-start items-start;
 }
 
 /* heading And Subheading */

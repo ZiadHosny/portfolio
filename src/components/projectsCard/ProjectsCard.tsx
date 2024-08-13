@@ -1,6 +1,6 @@
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { FiGithub } from "react-icons/fi";
-import { GrDeploy } from "react-icons/gr";
+import { GrDeploy, GrGooglePlay } from "react-icons/gr";
 import { Icons } from "./Icons";
 import "./ProjectsCard.css";
 
@@ -11,6 +11,7 @@ type CardProps = {
   imagePath: string;
   deploy: string;
   repository: string;
+  googlePlayLink?: string;
 };
 
 export const ProjectsCard = ({
@@ -20,6 +21,7 @@ export const ProjectsCard = ({
   imagePath,
   deploy,
   repository,
+  googlePlayLink,
 }: CardProps) => {
 
   return (
@@ -62,6 +64,16 @@ export const ProjectsCard = ({
               Repository
             </a>
           </button>
+          {googlePlayLink ?
+            <button className="deploy-btn btn">
+              <GrGooglePlay />
+              <a href={googlePlayLink} target="_blank">
+                Google Play
+              </a>
+            </button>
+            :
+            <></>
+          }
         </div>
       </div>
     </motion.div>

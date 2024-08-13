@@ -179,4 +179,17 @@ export const projects: Project[] = [
         ],
         deploy: "https://ziadhosny.vercel.app/"
     }),
+    createProject({
+        title: "Quran Kareem",
+        description: `The Quran, also romanized Qur'an or Koran, is the central religious text of Islam, believed by Muslims to be a revelation from God. It is organized in 114 chapters which consist of individual verses.
+Quran Kareem App aims to provide Quran recitations by famous reciters in different narrations on the web, mobile, watch, and TV devices.
+The app is available on mobile, tablet, and Android TV.`,
+        icons: [
+            ...Tech.Mern,
+            Tech.mui,
+            Tech.Redux,
+        ],
+        deploy: "https://quran-app-z.vercel.app/",
+        googlePlayLink: "https://play.google.com/store/apps/details?id=app.vercel.quran_app_z.twa"
+    }),
 ].reverse()
