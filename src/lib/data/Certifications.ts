@@ -1,7 +1,7 @@
 import { HackerRank, ITI, Internship, MaharaTech, Mansoura, Online, cloudinary, freeCodeCamp } from "../constants";
-import { Certification, createCertification } from "../utils/Certification";
+import { CertificationType, createCertification } from "../utils/Certification";
 
-export const certifications: Certification[] = [
+export const certifications: CertificationType[] = [
     createCertification({
         title: "Android",
         courseType: "Android Training (CCIC)",

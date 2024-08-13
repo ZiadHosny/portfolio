@@ -1,10 +1,9 @@
-import { Online, cloudinary, githubHost, githubRepos, imagesHost } from "../constants"
+import { Online } from "../constants"
 
-export type Certification = {
+export type CertificationType = {
     id?: string,
     title: string;
     courseType: string;
-    description?: string;
     place?: string;
     date: string;
     certificateLink?: string;
@@ -15,7 +14,6 @@ export type Certification = {
 type createCertificationProps = {
     title: string;
     courseType: string;
-    description?: string;
     place?: string;
     date: string;
     certificateLink?: string;
@@ -23,8 +21,8 @@ type createCertificationProps = {
 }
 
 export const createCertification = (
-    { title, courseType, place = Online, date, certificateImage, certificateLink, description }: createCertificationProps
-): Certification => {
+    { title, courseType, place = Online, date, certificateImage, certificateLink }: createCertificationProps
+): CertificationType => {
     const certificateAvailable = certificateImage ? true : false
     return {
         id: crypto.randomUUID(),
@@ -35,6 +33,5 @@ export const createCertification = (
         certificateAvailable,
         certificateImage,
         certificateLink,
-        description,
     }
 }

@@ -16,8 +16,8 @@ export const Footer = () => {
         <FooterIcon href="https://codepen.io/ziadhosny" icon={<SiCodepen size={25} />} />
         <FooterIcon href="https://linktr.ee/ziadhosny" icon={<SiLinktree size={25} />} />
       </div>
-      <div className="update-info">
-        <p>Last update: 11/02/2024</p>
+      <div className="self-center text-accentLight mt-5">
+        <p>Last update: 12/08/2024</p>
       </div>
     </footer>
   );

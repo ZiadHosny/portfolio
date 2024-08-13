@@ -1,69 +1,11 @@
 footer {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  gap: 10px;
-  width: 80%;
-  border-top: 1px solid #ec9a9a56;
-  padding-top: 25px;
-  color: var(--accent);
-  font-size: var(--small);
-  font-weight: 400;
+  @apply flex flex-col gap-[10px] w-[80%] m-auto font-normal text-accent pt-[25px] text-small border-t-[1px] border-mainLight;
 }
 
 .contact-me {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  color: var(--clear-light);
-  align-self: center;
+  @apply flex items-center justify-center gap-[10px] sm:gap-[40px] text-clearLight self-center;
 }
 
 .contact-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  color: var(--clear-light);
-  transition: color 200ms ease-in;
-}
-
-.contact-link:hover {
-  color: var(--light-main);
-  transition: color 200ms ease-in;
-}
-
-.update-info {
-  align-self: center;
-}
-
-.update-info p {
-  color: var(--accent-light);
-}
-
-@media screen and (max-width: 970px) {
-  .contact-me {
-    gap: 20px;
-  }
-
-  .contact-me {
-    text-align: center;
-  }
-
-}
-
-@media screen and (max-width: 490px) {
-
-  .contact-me {
-    align-items: center;
-    align-self: center;
-    gap: 10px;
-  }
-
-  .update-info {
-    align-self: center;
-    font-size: 12px;
-  }
-
+  @apply flex items-center justify-center gap-[5px] text-clearLight transition-colors duration-200 ease-in hover:text-mainLight hover:transition-colors hover:duration-200 hover:ease-in;
 }

@@ -1,5 +1,4 @@
-'use client'
-import { NotFound } from "@/components/NotFound/NotFound"
+import { NotFound } from "@/components/NotFound"
 export default function FourOhFour() {
     return (
         <NotFound />

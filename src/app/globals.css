@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url(var.css);
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scroll Bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-mainDark;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-accent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-accentDark;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html * {
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    @apply flex justify-center w-full bg-mainDark;
+}
+
+
+#root {
+    @apply flex flex-col sm:gap-[80px] gap-[35px] min-w-[280px] w-[1000px] max-w-[1000px] py-[30px] px-[15px] my-0 mx-[20px] overflow-x-hidden justify-start items-start;
+}
+
+/* heading And Subheading */
+.heading {
+    @apply text-mainHeading font-bold text-mainLight capitalize;
+}
+
+.subheading {
+    @apply text-subHeading font-semibold text-clearLight mb-[10px];
+}
+
+/* controllers  */
+.controllers {
+    @apply flex justify-center items-center self-center gap-[5px];
+
+    button {
+        @apply cursor-pointer transition-all duration-150 ease-in flex border-none p-[5px] text-medium text-mainDark bg-accent rounded-[5px] hover:bg-accentLight hover:transition-all hover:duration-150 hover:ease-in disabled:cursor-not-allowed disabled:bg-clearWhite;
+    }
+}
+
+/*  card-heading And card-subheading */
+.card-heading {
+    @apply text-accentLight font-bold text-subHeading;
+}
+
+.card-subheading {
+    @apply text-accentLight font-medium text-medium;
+}

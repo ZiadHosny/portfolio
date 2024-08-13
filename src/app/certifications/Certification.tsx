@@ -3,8 +3,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { ExperienceCard } from "@/components/experienceCard/ExperienceCard";
-import { CertificationType, certifications } from "@/lib/data/Certifications";
+import { certifications } from "@/lib/data/Certifications";
 import "./Certification.css";
+import { CertificationType } from "@/lib/utils/Certification";
 
 export const Certification = () => {
     const [currentPage, setCurrentPage] = useState(1);
