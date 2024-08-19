@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import "./ExperienceCard.css";
 import { ExperienceCardButton } from "./experienceCardButton/ExperienceCardButton";
-import { CertificationType } from "@/lib/data/Certifications";
+import { CertificationType } from "@/lib/utils/Certification";
 
 export const ExperienceCard = ({
   title,

@@ -5,6 +5,7 @@ export type CertificationType = {
     title: string;
     courseType: string;
     place?: string;
+    description?: string,
     date: string;
     certificateLink?: string;
     certificateAvailable: boolean;
