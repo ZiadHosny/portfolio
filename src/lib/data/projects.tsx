@@ -167,18 +167,18 @@ export const projects: Project[] = [
         imagePath: 'v1695920466/projects/pro-shop_kwlain.png',
         deploy: "https://pro-shop-z.vercel.app/",
     }),
-    createProject({
-        title: "portfolio",
-        description: `My personal portfolio to show my progress,
-         skills and my latest projects,
-          You can contact with me through it`,
-        icons: [
-            ...Tech.nextIcons,
-            Tech.mui,
-            Tech.Framer,
-        ],
-        deploy: "https://ziadhosny.vercel.app/"
-    }),
+    // createProject({
+    //     title: "portfolio",
+    //     description: `My personal portfolio to show my progress,
+    //      skills and my latest projects,
+    //       You can contact with me through it`,
+    //     icons: [
+    //         ...Tech.nextIcons,
+    //         Tech.mui,
+    //         Tech.Framer,
+    //     ],
+    //     deploy: "https://ziadhosny.vercel.app/"
+    // }),
     createProject({
         title: "Quran Kareem",
         description: `The Quran, also romanized Qur'an or Koran, is the central religious text of Islam, believed by Muslims to be a revelation from God. It is organized in 114 chapters which consist of individual verses.
