@@ -192,4 +192,14 @@ The app is available on mobile, tablet, and Android TV.`,
         deploy: "https://quran-app-z.vercel.app/",
         googlePlayLink: "https://play.google.com/store/apps/details?id=app.vercel.quran_app_z.twa"
     }),
+    createProject({
+        title: "Life Ward",
+        description: `Freelance Project for Logex Tech Company`,
+        icons: [
+            ...Tech.Mern,
+            Tech.mui,
+            Tech.Redux,
+        ],
+        deploy: "https://life-ward.com/",
+    }),
 ].reverse()
