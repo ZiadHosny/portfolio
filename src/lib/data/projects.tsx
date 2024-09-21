@@ -115,6 +115,15 @@ export const projects: Project[] = [
         icons: Tech.reactJsWithAxios
     }),
     createProject({
+        title: "Family Guy",
+        description: `Learn NEXT Building Full Stack Application`,
+        icons: [
+            ...Tech.nextIcons,
+            Tech.mui,
+        ],
+        deploy: "https://family-guy-z.vercel.app/"
+    }),
+    createProject({
         title: "Netflix",
         description: "Netflix App Use IMDB api",
         icons: Tech.reactJsWithAxios,
