@@ -199,7 +199,7 @@ The app is available on mobile, tablet, and Android TV.`,
             Tech.Redux,
         ],
         deploy: "https://quran-app-z.vercel.app/",
-        googlePlayLink: "https://play.google.com/store/apps/details?id=app.vercel.quran_app_z.twa"
+        googlePlayLink: "https://play.google.com/store/apps/details?id=app.vercel.quran_app_z"
     }),
     createProject({
         title: "Life Ward",
