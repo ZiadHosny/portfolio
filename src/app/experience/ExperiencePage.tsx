@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
@@ -19,21 +19,18 @@ export const Experience = () => {
     <AnimatePresence>
       <motion.div
         layout="preserve-aspect"
-        initial={{ opacity: 0, y: -200 }
-        }
+        initial={{ opacity: 0, y: -200 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, layout: { duration: 0.2 } }}
         className="experience-container"
       >
-        <h1 className="heading" > My experience </h1>
-        < div className="cards-container" >
-          {
-            slicedArray.map((props: ExperienceType) => (
-              <ExperienceCard {...props} key={props.id} />
-            ))
-          }
+        <h1 className="heading"> My experience </h1>
+        <div className="cards-container">
+          {slicedArray.map((props: ExperienceType) => (
+            <ExperienceCard {...props} key={props.id} />
+          ))}
         </div>
-        < div className="controllers" >
+        <div className="controllers">
           <button
             disabled={currentPage === 1 ? true : false}
             onClick={() => {
@@ -42,7 +39,7 @@ export const Experience = () => {
           >
             <BsArrowLeftShort />
           </button>
-          < button
+          <button
             disabled={currentPage === totalPages ? true : false}
             onClick={() => {
               setCurrentPage(currentPage + 1);

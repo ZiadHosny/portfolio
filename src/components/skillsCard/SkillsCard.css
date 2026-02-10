@@ -1,39 +1,36 @@
 .skills-card {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: max-content;
-    user-select: none;
-    color: var(--dark-main);
-    font-size: var(--small);
-    gap: 5px;
-    font-weight: 800;
-    padding: 12px;
-    border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: max-content;
+  user-select: none;
+  color: var(--dark-main);
+  font-size: var(--small);
+  gap: 5px;
+  font-weight: 800;
+  padding: 12px;
+  border-radius: 10px;
 }
 
 .skills-card svg {
-    font-size: var(--medium);
-    transition: all 200ms ease;
+  font-size: var(--medium);
+  transition: all 200ms ease;
 }
 
 .skills-card:hover svg {
-    transform: scale(1.2) rotate(-8deg);
-    transition: all 200ms ease;
+  transform: scale(1.2) rotate(-8deg);
+  transition: all 200ms ease;
 }
 
-
 @media screen and (max-width: 970px) {
-
-    .skills-card {
-        padding: 10px;
-    }
+  .skills-card {
+    padding: 10px;
+  }
 }
 
 @media screen and (max-width: 680px) {
-
-    .skills-card {
-        box-shadow: none !important;
-    }
+  .skills-card {
+    box-shadow: none !important;
+  }
 }

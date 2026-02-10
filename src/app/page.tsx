@@ -1,9 +1,9 @@
-'use client'
+"use client";
 import { motion } from "framer-motion";
 import { AiOutlineMail } from "react-icons/ai";
 import { HiOutlineDocumentText } from "react-icons/hi";
 import { ZButton } from "@/components/ZButton/ZButton";
-import './AboutMe.css';
+import "./AboutMe.css";
 import { ProfilePicture } from "@/components/profilePicture/ProfilePicture";
 
 const className = {
@@ -15,8 +15,8 @@ const className = {
   lg:text-left text-center break-words w-full md:w-[60ch]
   `,
   aboutMe: `flex flex-col lg:items-start items-center justify-center`,
-  buttonsContainer: `w-[75%] flex sm:flex-row flex-col justify-start items-center gap-[15px]`
-}
+  buttonsContainer: `w-[75%] flex sm:flex-row flex-col justify-start items-center gap-[15px]`,
+};
 
 export default function AboutMe() {
   return (
@@ -37,7 +37,7 @@ export default function AboutMe() {
         <div className={className.buttonsContainer}>
           <ZButton
             content="Resume"
-            direction={'./ZiadHosny.pdf'}
+            direction={"./ZiadHosny.pdf"}
             icon={<HiOutlineDocumentText />}
             document={true}
           ></ZButton>
@@ -48,18 +48,16 @@ export default function AboutMe() {
             document={false}
           ></ZButton>
         </div>
-        <main
-          style={{ wordSpacing: '6px' }}
-          className={className.aboutMeBody}>
+        <main style={{ wordSpacing: "6px" }} className={className.aboutMeBody}>
+          <p>Welcome to my portfolio!</p>
           <p>
-            Welcome to my portfolio!
+            I have 4+ years of Experience in Analyzing, Designing, Developing
+            and Integrating Front-End & Back-End based applications.
           </p>
           <p>
-            I have 3+ years of Experience in Analyzing, Designing, Developing and Integrating Front-End & Back-End based applications.
-          </p>
-          <p>
-            Experience in developing application using TypeScript, React, ReactNative, NodeJs, Express. Seeking a role
-            as Front-end and Nodejs Developer.
+            Experience in developing application using TypeScript, React,
+            ReactNative, NodeJs, Express. Seeking a role as Front-end and Nodejs
+            Developer.
           </p>
           <p>
             I am excited to share my projects with you and I look forward to the
@@ -70,4 +68,4 @@ export default function AboutMe() {
       <ProfilePicture />
     </motion.div>
   );
-};
+}

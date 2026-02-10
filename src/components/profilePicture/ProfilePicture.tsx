@@ -8,14 +8,16 @@ export const ProfilePicture = () => {
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{ duration: 0.4 }}
-      className={'pictureContainer'}
+      className={"pictureContainer"}
     >
       <Image
-        className={'image'}
-        width={250} height={250}
-        src={'/Zi.png'}
+        className={"image"}
+        width={250}
+        height={250}
+        src={"/Zi.png"}
         alt="avatar"
-        draggable="false" />
+        draggable="false"
+      />
     </motion.div>
   );
 };

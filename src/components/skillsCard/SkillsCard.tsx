@@ -1,42 +1,42 @@
-'use client'
+"use client";
 import { motion } from "framer-motion";
 import "./SkillsCard.css";
 
 type CardProps = {
-    icon: React.ReactNode;
-    name: string;
-    mainColor: string;
-    lightColor: string;
-    index: number;
+  icon: React.ReactNode;
+  name: string;
+  mainColor: string;
+  lightColor: string;
+  index: number;
 };
 
 export const SkillsCard = ({
-    icon,
-    name,
-    mainColor,
-    lightColor,
-    index,
+  icon,
+  name,
+  mainColor,
+  lightColor,
+  index,
 }: CardProps) => {
-    let colorStyles = {
-        backgroundColor: `${mainColor}`,
-        boxShadow: `15px 0px ${lightColor}`,
-    };
+  let colorStyles = {
+    backgroundColor: `${mainColor}`,
+    boxShadow: `15px 0px ${lightColor}`,
+  };
 
-    return (
-        <motion.div
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 0.9 }}
-            whileHover={{
-                scale: [1.03, 0.97, 1],
-                opacity: 1,
-                transition: { duration: 0.4 },
-            }}
-            transition={{ duration: 0.5, delay: 0.09 * index }}
-            className="skills-card"
-            style={colorStyles}
-        >
-            {icon}
-            <span>{name}</span>
-        </motion.div>
-    );
+  return (
+    <motion.div
+      initial={{ scale: 0, opacity: 0 }}
+      animate={{ scale: 1, opacity: 0.9 }}
+      whileHover={{
+        scale: [1.03, 0.97, 1],
+        opacity: 1,
+        transition: { duration: 0.4 },
+      }}
+      transition={{ duration: 0.5, delay: 0.09 * index }}
+      className="skills-card"
+      style={colorStyles}
+    >
+      {icon}
+      <span>{name}</span>
+    </motion.div>
+  );
 };

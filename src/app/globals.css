@@ -8,61 +8,60 @@
 
 /* Scroll Bar */
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    @apply bg-mainDark;
+  @apply bg-mainDark;
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-accent;
+  @apply bg-accent;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    @apply bg-accentDark;
+  @apply bg-accentDark;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 html * {
-    font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
-    @apply flex justify-center w-full bg-mainDark;
+  @apply flex justify-center w-full bg-mainDark;
 }
 
-
 #root {
-    @apply flex flex-col sm:gap-[50px] gap-[35px] min-w-[280px] w-[1000px] max-w-[1000px] py-[30px] px-[15px] my-0 mx-[20px] overflow-x-hidden justify-start items-start;
+  @apply flex flex-col sm:gap-[50px] gap-[35px] min-w-[280px] w-[1000px] max-w-[1000px] py-[30px] px-[15px] my-0 mx-[20px] overflow-x-hidden justify-start items-start;
 }
 
 /* heading And Subheading */
 .heading {
-    @apply text-mainHeading font-bold text-mainLight capitalize;
+  @apply text-mainHeading font-bold text-mainLight capitalize;
 }
 
 .subheading {
-    @apply text-subHeading font-semibold text-clearLight mb-[10px];
+  @apply text-subHeading font-semibold text-clearLight mb-[10px];
 }
 
 /* controllers  */
 .controllers {
-    @apply flex justify-center items-center self-center gap-[5px];
+  @apply flex justify-center items-center self-center gap-[5px];
 
-    button {
-        @apply cursor-pointer transition-all duration-150 ease-in flex border-none p-[5px] text-medium text-mainDark bg-accent rounded-[5px] hover:bg-accentLight hover:transition-all hover:duration-150 hover:ease-in disabled:cursor-not-allowed disabled:bg-clearWhite;
-    }
+  button {
+    @apply cursor-pointer transition-all duration-150 ease-in flex border-none p-[5px] text-medium text-mainDark bg-accent rounded-[5px] hover:bg-accentLight hover:transition-all hover:duration-150 hover:ease-in disabled:cursor-not-allowed disabled:bg-clearWhite;
+  }
 }
 
 /*  card-heading And card-subheading */
 .card-heading {
-    @apply text-accentLight font-bold text-subHeading;
+  @apply text-accentLight font-bold text-subHeading;
 }
 
 .card-subheading {
-    @apply text-accentLight font-medium text-medium;
+  @apply text-accentLight font-medium text-medium;
 }

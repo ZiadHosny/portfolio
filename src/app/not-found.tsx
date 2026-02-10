@@ -1,6 +1,4 @@
-import { NotFound } from "@/components/NotFound"
+import { NotFound } from "@/components/NotFound/NotFound";
 export default function FourOhFour() {
-    return (
-        <NotFound />
-    )
+  return <NotFound />;
 }

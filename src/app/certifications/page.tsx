@@ -1,7 +1,5 @@
-import { Certification } from './Certification'
+import { Certification } from "./Certification";
 
 export default function page() {
-  return (
-    <Certification />
-  )
+  return <Certification />;
 }

@@ -110,7 +110,6 @@
 }
 
 @media screen and (max-width: 970px) {
-
   .project-description p {
     width: 90%;
     word-wrap: break-word;
@@ -118,7 +117,6 @@
 }
 
 @media screen and (max-width: 680px) {
-
   .project {
     align-items: flex-start;
     justify-content: flex-start;
@@ -132,12 +130,9 @@
   .project-description p {
     text-align: left;
   }
-
 }
 
-
 @media screen and (max-width: 490px) {
-
   .project-preview {
     max-width: unset;
     width: 100%;

@@ -28,13 +28,13 @@ export const ExperienceCard = ({
         </span>
       </div>
       <p className="card-description">{description}</p>
-      {
-        certificateAvailable ? <ExperienceCardButton
+      {certificateAvailable ? (
+        <ExperienceCardButton
           certificateLink={certificateLink}
           certificateAvailable={certificateAvailable}
           certificateImage={certificateImage}
-        /> : null
-      }
+        />
+      ) : null}
     </motion.div>
   );
 };

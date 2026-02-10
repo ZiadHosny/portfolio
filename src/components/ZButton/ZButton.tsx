@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import ButtonMui from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
@@ -43,7 +43,12 @@ const dialogProps = {
   borderRadius: "15px",
 };
 
-export const ZButton = ({ content, direction, icon, document }: ButtonProps) => {
+export const ZButton = ({
+  content,
+  direction,
+  icon,
+  document,
+}: ButtonProps) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -81,8 +86,8 @@ export const ZButton = ({ content, direction, icon, document }: ButtonProps) => 
         </CustomDialogTitle>
         <DialogContent style={{ color: "var(--clear-white)" }}>
           <CustomDialogContentText id="alert-dialog-description">
-            A new browser tab with my personal resume (.PDF) is about to open. Do you
-            want to continue?
+            A new browser tab with my personal resume (.PDF) is about to open.
+            Do you want to continue?
           </CustomDialogContentText>
         </DialogContent>
         <DialogActions>

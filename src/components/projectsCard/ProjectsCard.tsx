@@ -23,7 +23,6 @@ export const ProjectsCard = ({
   repository,
   googlePlayLink,
 }: CardProps) => {
-
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
@@ -64,16 +63,16 @@ export const ProjectsCard = ({
               Repository
             </a>
           </button>
-          {googlePlayLink ?
+          {googlePlayLink ? (
             <button className="deploy-btn btn">
               <GrGooglePlay />
               <a href={googlePlayLink} target="_blank">
                 Google Play
               </a>
             </button>
-            :
+          ) : (
             <></>
-          }
+          )}
         </div>
       </div>
     </motion.div>

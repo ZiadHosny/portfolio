@@ -74,7 +74,6 @@
 }
 
 @media screen and (max-width: 970px) {
-
   .study-card {
     justify-content: center;
     align-items: center;
@@ -88,7 +87,6 @@
 }
 
 @media screen and (max-width: 680px) {
-
   .study-card {
     align-items: flex-start;
     text-align: left;
@@ -96,7 +94,6 @@
 }
 
 @media screen and (max-width: 490px) {
-
   .study-card p {
     width: 100% !important;
   }

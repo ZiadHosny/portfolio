@@ -21,7 +21,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-
   .about-me {
     display: flex;
     flex-direction: column;
@@ -31,8 +30,6 @@
 }
 
 @media screen and (max-width: 768px) {
-
-
   .about-me {
     align-items: flex-start;
   }
@@ -43,10 +40,8 @@
 }
 
 @media screen and (max-width: 640px) {
-
   .buttons-container {
     flex-direction: column;
     width: 74%;
   }
-
 }

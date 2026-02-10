@@ -11,7 +11,11 @@ type CertificateProps = {
   link?: string;
 };
 
-export const ExperienceCertificate = ({ close, image, link }: CertificateProps) => {
+export const ExperienceCertificate = ({
+  close,
+  image,
+  link,
+}: CertificateProps) => {
   const [loading, setLoading] = useState<boolean>(true);
   const second: number = 0;
   window.scrollTo(0, 0);
@@ -55,12 +59,12 @@ export const ExperienceCertificate = ({ close, image, link }: CertificateProps) 
           <img src={image} alt="certificate" draggable={false} />
         )}
 
-        {link ?
+        {link ? (
           <a href={link} target="_blank" className="certificate-link">
             <BiLink />
             Certificate's URL
-          </a> : null
-        }
+          </a>
+        ) : null}
       </motion.div>
     </>
   );
