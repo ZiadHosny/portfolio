@@ -48,7 +48,7 @@ export const Footer = () => {
         />
       </div>
       <div className="self-center text-accentLight mt-5">
-        <p>Last update: 12/08/2024</p>
+        <p>Last update: 12/02/2026</p>
       </div>
     </footer>
   );
