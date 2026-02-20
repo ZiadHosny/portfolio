@@ -6,6 +6,24 @@ import * as Gr from "react-icons/gr";
 export const Js = () => <Si.SiJavascript />;
 export const Ts = () => <Si.SiTypescript />;
 export const Python = () => <Si.SiPython />;
+export const Php = () => <Si.SiPhp />;
+
+//back-end
+export const NodeJs = () => <Si.SiNodedotjs />;
+export const NestJs = () => <Si.SiNestjs />;
+export const Express = () => <Si.SiExpress />;
+export const Strapi = () => <Si.SiStrapi />;
+export const Mongoose = () => <Si.SiMongoose />;
+export const Sequelize = () => <Si.SiSequelize />;
+export const Prisma = () => <Si.SiPrisma />;
+export const JWT = () => <Si.SiJsonwebtokens />;
+
+// Database
+export const Postgresql = () => <Si.SiPostgresql />;
+export const Mongodb = () => <Si.SiMongodb />;
+export const MicrosoftSqlServer = () => <Si.SiMicrosoftsqlserver />;
+export const Sql = () => <Gr.GrMysql />;
+export const Firebase = () => <Si.SiFirebase />;
 
 //front-end
 export const React = () => <Si.SiReact />;
@@ -26,23 +44,14 @@ export const AntDesign = () => <Si.SiAntdesign />;
 export const Framer = () => <Si.SiFramer />;
 export const Gatsby = () => <Si.SiGatsby />;
 export const Backstage = () => <Si.SiBackstage />;
-
-//back-end
-export const NodeJs = () => <Si.SiNodedotjs />;
-export const Express = () => <Si.SiExpress />;
-export const NestJs = () => <Si.SiNestjs />;
-export const Mongodb = () => <Si.SiMongodb />;
-export const Mongoose = () => <Si.SiMongoose />;
-export const Postgresql = () => <Si.SiPostgresql />;
-export const Sql = () => <Gr.GrMysql />;
-export const MicrosoftSqlServer = () => <Si.SiMicrosoftsqlserver />;
-export const Sequelize = () => <Si.SiSequelize />;
-export const Docker = () => <Si.SiDocker />;
-export const JWT = () => <Si.SiJsonwebtokens />;
-export const Firebase = () => <Si.SiFirebase />;
+export const Axios = () => <Si.SiAxios />;
 
 //tools
+export const Docker = () => <Si.SiDocker />;
+export const WordPress = () => <Si.SiWordpress />;
+export const OracleApex = () => <Si.SiOracle />;
 export const Postman = () => <Si.SiPostman />;
+export const Sentry = () => <Si.SiSentry />;
 export const Git = () => <Si.SiGit />;
 export const GitHub = () => <Si.SiGithub />;
 export const GithubActions = () => <Si.SiGithubactions />;
@@ -51,6 +60,4 @@ export const Npm = () => <Si.SiNpm />;
 export const Figma = () => <Si.SiFigma />;
 export const Canva = () => <Si.SiCanva />;
 export const Notion = () => <Si.SiNotion />;
-
-//others
-export const Axios = () => <Si.SiAxios />;
+export const VSCode = () => <Si.SiVisualstudiocode />;

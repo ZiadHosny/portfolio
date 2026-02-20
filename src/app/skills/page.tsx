@@ -4,6 +4,7 @@ import { SkillsCard } from "@/components/skillsCard/SkillsCard";
 import "./Skills.css";
 import {
   backendData,
+  dataBaseData,
   frontEndData,
   programmingLanguagesData,
   toolsData,
@@ -43,8 +44,9 @@ export default function Skills() {
           heading="Programming languages"
           data={programmingLanguagesData}
         />
+        <SkillsSection heading="Back-end" data={backendData} />
+        <SkillsSection heading="Database" data={dataBaseData} />
         <SkillsSection heading="Front-end" data={frontEndData} />
-        <SkillsSection heading="back-end" data={backendData} />
         <SkillsSection heading="Other tools" data={toolsData} />
       </div>
     </motion.div>

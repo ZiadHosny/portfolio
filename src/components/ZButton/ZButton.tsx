@@ -13,7 +13,7 @@ type ButtonProps = {
   content: string;
   direction: string;
   icon: React.ReactNode;
-  document: boolean;
+  document?: boolean;
 };
 
 const CustomDialogTitle = styled(DialogTitle)`
@@ -47,7 +47,7 @@ export const ZButton = ({
   content,
   direction,
   icon,
-  document,
+  document = false,
 }: ButtonProps) => {
   const [open, setOpen] = useState(false);
 

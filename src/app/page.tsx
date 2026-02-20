@@ -45,23 +45,27 @@ export default function AboutMe() {
             content="Contact me"
             direction="mailto:ziadhosny007@gmail.com"
             icon={<AiOutlineMail />}
-            document={false}
           ></ZButton>
         </div>
-        <main style={{ wordSpacing: "6px" }} className={className.aboutMeBody}>
-          <p>Welcome to my portfolio!</p>
+        <main style={{ wordSpacing: "4px" }} className={className.aboutMeBody}>
+          <p>Welcome to my portfolio.</p>
+
           <p>
-            I have 4+ years of Experience in Analyzing, Designing, Developing
-            and Integrating Front-End & Back-End based applications.
+            I am a Full Stack Developer with 5+ years of experience building
+            scalable and maintainable applications for both back-end and
+            front-end.
           </p>
+
           <p>
-            Experience in developing application using TypeScript, React,
-            ReactNative, NodeJs, Express. Seeking a role as Front-end and Nodejs
-            Developer.
+            I specialize in Node.js, Express, and NestJS for server-side
+            development, and I have solid experience with TypeScript, React, and
+            React Native for creating responsive user interfaces.
           </p>
+
           <p>
-            I am excited to share my projects with you and I look forward to the
-            opportunity to work together.
+            I enjoy solving complex problems, optimizing performance, and
+            delivering high-quality solutions. Take a look at my projects to see
+            my work in action.
           </p>
         </main>
       </motion.div>

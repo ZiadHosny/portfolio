@@ -7,6 +7,42 @@ export const programmingLanguagesData: Skill[] = [
   createIcon({ iconColor: inc++, icon: <Icons.Js />, name: "JavaScript" }),
   createIcon({ iconColor: inc++, icon: <Icons.Ts />, name: "TypeScript" }),
   createIcon({ iconColor: inc++, icon: <Icons.Python />, name: "Python" }),
+  createIcon({ iconColor: inc++, icon: <Icons.Php />, name: "PHP" }),
+];
+
+export const backendData: Skill[] = [
+  createIcon({ iconColor: inc++, icon: <Icons.NodeJs />, name: "Node Js" }),
+  createIcon({ iconColor: inc++, icon: <Icons.NestJs />, name: "Nest JS" }),
+  createIcon({ iconColor: inc++, icon: <Icons.Express />, name: "Express" }),
+  createIcon({ iconColor: inc++, icon: <Icons.Strapi />, name: "Strapi" }),
+  createIcon({ iconColor: inc++, icon: <Icons.Mongoose />, name: "Mongoose" }),
+  createIcon({
+    iconColor: inc++,
+    icon: <Icons.Sequelize />,
+    name: "Sequelize",
+  }),
+  createIcon({
+    iconColor: inc++,
+    icon: <Icons.Prisma />,
+    name: "Prisma",
+  }),
+  createIcon({ iconColor: inc++, icon: <Icons.JWT />, name: "JWT" }),
+];
+
+export const dataBaseData: Skill[] = [
+  createIcon({
+    iconColor: inc++,
+    icon: <Icons.Postgresql />,
+    name: "Postgresql",
+  }),
+  createIcon({ iconColor: inc++, icon: <Icons.Mongodb />, name: "Mongodb" }),
+  createIcon({
+    iconColor: inc++,
+    icon: <Icons.MicrosoftSqlServer />,
+    name: "Microsoft Sql Server",
+  }),
+  createIcon({ iconColor: inc++, icon: <Icons.Sql />, name: "Sql" }),
+  createIcon({ iconColor: inc++, icon: <Icons.Firebase />, name: "Firebase" }),
 ];
 
 export const frontEndData: Skill[] = [
@@ -48,37 +84,27 @@ export const frontEndData: Skill[] = [
     icon: <Icons.Backstage />,
     name: "BackstageJS",
   }),
-];
-
-export const backendData: Skill[] = [
-  createIcon({ iconColor: inc++, icon: <Icons.NodeJs />, name: "Node Js" }),
-  createIcon({ iconColor: inc++, icon: <Icons.Express />, name: "Express" }),
-  createIcon({ iconColor: inc++, icon: <Icons.NestJs />, name: "Nest JS" }),
-  createIcon({ iconColor: inc++, icon: <Icons.Mongodb />, name: "Mongodb" }),
-  createIcon({ iconColor: inc++, icon: <Icons.Mongoose />, name: "Mongoose" }),
   createIcon({
     iconColor: inc++,
-    icon: <Icons.Postgresql />,
-    name: "Postgresql",
+    icon: <Icons.Axios />,
+    name: "Axios",
   }),
-  createIcon({ iconColor: inc++, icon: <Icons.Sql />, name: "Sql" }),
-  createIcon({
-    iconColor: inc++,
-    icon: <Icons.MicrosoftSqlServer />,
-    name: "Microsoft Sql Server",
-  }),
-  createIcon({
-    iconColor: inc++,
-    icon: <Icons.Sequelize />,
-    name: "Sequelize",
-  }),
-  createIcon({ iconColor: inc++, icon: <Icons.Docker />, name: "Docker" }),
-  createIcon({ iconColor: inc++, icon: <Icons.JWT />, name: "JWT" }),
-  createIcon({ iconColor: inc++, icon: <Icons.Firebase />, name: "Firebase" }),
 ];
 
 export const toolsData: Skill[] = [
+  createIcon({ iconColor: inc++, icon: <Icons.Docker />, name: "Docker" }),
+  createIcon({
+    iconColor: inc++,
+    icon: <Icons.WordPress />,
+    name: "WordPress",
+  }),
+  createIcon({
+    iconColor: inc++,
+    icon: <Icons.OracleApex />,
+    name: "Oracle APEX",
+  }),
   createIcon({ iconColor: inc++, icon: <Icons.Postman />, name: "Postman" }),
+  createIcon({ iconColor: inc++, icon: <Icons.Sentry />, name: "Sentry" }),
   createIcon({ iconColor: inc++, icon: <Icons.Git />, name: "Git" }),
   createIcon({ iconColor: inc++, icon: <Icons.GitHub />, name: "GitHub" }),
   createIcon({
@@ -91,4 +117,5 @@ export const toolsData: Skill[] = [
   createIcon({ iconColor: inc++, icon: <Icons.Figma />, name: "Figma" }),
   createIcon({ iconColor: inc++, icon: <Icons.Canva />, name: "Canva" }),
   createIcon({ iconColor: inc++, icon: <Icons.Notion />, name: "Notion" }),
+  createIcon({ iconColor: inc++, icon: <Icons.VSCode />, name: "VS Code" }),
 ];
