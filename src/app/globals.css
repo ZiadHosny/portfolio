@@ -132,38 +132,6 @@ body {
 }
 @keyframes gradient-pan { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
 
-/* Aurora background */
-.aurora-blob {
-  position: absolute;
-  border-radius: 9999px;
-  will-change: transform;
-}
-.aurora-1 { width: 55vmax; height: 55vmax; left: -15vmax; top: -20vmax;
-  background: radial-gradient(circle, rgb(189 147 249 / 0.55), transparent 65%);
-  animation: drift-1 18s ease-in-out infinite alternate; }
-.aurora-2 { width: 45vmax; height: 45vmax; right: -12vmax; top: -10vmax;
-  background: radial-gradient(circle, rgb(255 121 198 / 0.35), transparent 65%);
-  animation: drift-2 22s ease-in-out infinite alternate; }
-.aurora-3 { width: 50vmax; height: 50vmax; left: 25%; bottom: -30vmax;
-  background: radial-gradient(circle, rgb(139 233 253 / 0.25), transparent 65%);
-  animation: drift-3 26s ease-in-out infinite alternate; }
-.aurora-4 { width: 35vmax; height: 35vmax; right: 10%; bottom: -10vmax;
-  background: radial-gradient(circle, rgb(98 114 164 / 0.55), transparent 65%);
-  animation: drift-1 20s ease-in-out infinite alternate-reverse; }
-@keyframes drift-1 { to { transform: translate3d(12vmax, 8vmax, 0) scale(1.15); } }
-@keyframes drift-2 { to { transform: translate3d(-10vmax, 12vmax, 0) scale(0.9); } }
-@keyframes drift-3 { to { transform: translate3d(-8vmax, -10vmax, 0) scale(1.2); } }
-.aurora-grid {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgb(248 248 242 / 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(248 248 242 / 0.045) 1px, transparent 1px);
-  background-size: 56px 56px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 80%);
-}
-.aurora-fade { position: absolute; inset: auto 0 0 0; height: 30%;
-  background: linear-gradient(to bottom, transparent, #1e1f29); }
-
 /* Glass card */
 .glass {
   @apply rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl;
@@ -200,33 +168,13 @@ body {
 @keyframes marquee { to { transform: translateX(-50%); } }
 
 @media (prefers-reduced-motion: reduce) {
-  .text-gradient-animated, .aurora-blob, .float-slow, .float-slower, .marquee-track { animation: none !important; }
+  .text-gradient-animated, .float-slow, .float-slower, .marquee-track { animation: none !important; }
 }
 
 /* ───────────── Creative (variant C) ───────────── */
 .text-outline {
   color: transparent;
   -webkit-text-stroke: 1.5px rgb(189 147 249 / 0.22);
-}
-.holo-border {
-  background: conic-gradient(from 0deg, #bd93f9, #ff79c6, #8be9fd, #50fa7b, #f1fa8c, #bd93f9);
-  box-shadow: 0 30px 80px -20px rgb(189 147 249 / 0.55);
-}
-.spin-slow { animation: spin 16s linear infinite; }
-
-/* Film grain overlay */
-.grain::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 80;
-  pointer-events: none;
-  opacity: 0.06;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .spin-slow { animation: none !important; }
 }
 
 /* ───────────── Simple (variant D) ───────────── */
