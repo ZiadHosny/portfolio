@@ -4,6 +4,8 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { RevealObserver } from "@/components/RevealObserver";
+import { MotionProvider } from "@/components/fx/MotionProvider";
+import { Spotlight } from "@/components/fx/Spotlight";
 import { site } from "@/lib/site";
 
 const sans = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
@@ -81,10 +83,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           Skip to content
         </a>
-        <Navbar />
-        <main id="main">{children}</main>
-        <Footer />
+        <MotionProvider>
+          <Navbar />
+          <main id="main">{children}</main>
+          <Footer />
+        </MotionProvider>
         <RevealObserver />
+        <Spotlight />
       </body>
     </html>
   );

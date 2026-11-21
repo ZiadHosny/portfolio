@@ -14,6 +14,13 @@ export const site = {
     "Full-Stack Software Engineer from Egypt with 5+ years of experience in Node.js, NestJS, PostgreSQL, React and Next.js. I also make Arabic content about System Design.",
 };
 
+/** Hero counters. Update `videos` when new videos are published. */
+export const stats = [
+  { value: 5, suffix: "+", label: "Years of experience" },
+  { value: 70, suffix: "+", label: "Projects on GitHub" },
+  { value: 18, suffix: "", label: "Videos on YouTube" },
+];
+
 export const youtube = {
   channel: "https://www.youtube.com/@ziadhosnydev",
   systemDesignPlaylist:

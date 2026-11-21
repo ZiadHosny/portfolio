@@ -1,7 +1,7 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 
-type Props = { lines: string[]; className?: string };
+type Props = { lines: string[]; className?: string; prefix?: ReactNode };
 
 const TYPE_MS = 55;
 const DELETE_MS = 30;
@@ -12,7 +12,7 @@ const HOLD_MS = 1800;
  * Server render shows the first line in full (good for SEO / no-JS);
  * the animation starts by deleting it after the hold time.
  */
-export const TypedLine = ({ lines, className }: Props) => {
+export const TypedLine = ({ lines, className, prefix }: Props) => {
   const [index, setIndex] = useState(0);
   const [text, setText] = useState(lines[0]);
   const [deleting, setDeleting] = useState(false);
@@ -41,6 +41,7 @@ export const TypedLine = ({ lines, className }: Props) => {
     <p className={className}>
       <span className="sr-only">{lines.join(", ")}</span>
       <span aria-hidden="true">
+        {prefix}
         {text}
         <span className="caret" />
       </span>

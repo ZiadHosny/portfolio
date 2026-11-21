@@ -118,3 +118,87 @@ body {
   .caret, .photo-ring { animation: none; }
   *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
+
+/* ───────────── FX: shared by the hero variants (and later sections) ───────────── */
+
+/* Animated gradient text */
+.text-gradient-animated {
+  background: linear-gradient(100deg, #f8f8f2 0%, #bd93f9 22%, #ff79c6 42%, #8be9fd 62%, #bd93f9 80%, #f8f8f2 100%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-pan 8s ease-in-out infinite alternate;
+}
+@keyframes gradient-pan { from { background-position: 0% 50%; } to { background-position: 100% 50%; } }
+
+/* Aurora background */
+.aurora-blob {
+  position: absolute;
+  border-radius: 9999px;
+  will-change: transform;
+}
+.aurora-1 { width: 55vmax; height: 55vmax; left: -15vmax; top: -20vmax;
+  background: radial-gradient(circle, rgb(189 147 249 / 0.55), transparent 65%);
+  animation: drift-1 18s ease-in-out infinite alternate; }
+.aurora-2 { width: 45vmax; height: 45vmax; right: -12vmax; top: -10vmax;
+  background: radial-gradient(circle, rgb(255 121 198 / 0.35), transparent 65%);
+  animation: drift-2 22s ease-in-out infinite alternate; }
+.aurora-3 { width: 50vmax; height: 50vmax; left: 25%; bottom: -30vmax;
+  background: radial-gradient(circle, rgb(139 233 253 / 0.25), transparent 65%);
+  animation: drift-3 26s ease-in-out infinite alternate; }
+.aurora-4 { width: 35vmax; height: 35vmax; right: 10%; bottom: -10vmax;
+  background: radial-gradient(circle, rgb(98 114 164 / 0.55), transparent 65%);
+  animation: drift-1 20s ease-in-out infinite alternate-reverse; }
+@keyframes drift-1 { to { transform: translate3d(12vmax, 8vmax, 0) scale(1.15); } }
+@keyframes drift-2 { to { transform: translate3d(-10vmax, 12vmax, 0) scale(0.9); } }
+@keyframes drift-3 { to { transform: translate3d(-8vmax, -10vmax, 0) scale(1.2); } }
+.aurora-grid {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgb(248 248 242 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(248 248 242 / 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 80%);
+}
+.aurora-fade { position: absolute; inset: auto 0 0 0; height: 30%;
+  background: linear-gradient(to bottom, transparent, #1e1f29); }
+
+/* Glass card */
+.glass {
+  @apply rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-xl;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.06), 0 10px 40px -20px rgb(0 0 0 / 0.6);
+}
+
+/* Spotlight that follows the cursor (vars set by <Spotlight/>) */
+[data-spotlight] { position: relative; isolation: isolate; }
+[data-spotlight]::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -1;
+  opacity: 0; transition: opacity 0.3s;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgb(189 147 249 / 0.16), transparent 45%);
+}
+[data-spotlight]:hover::before { opacity: 1; }
+
+/* Bold v1-style buttons: solid fill + offset shadow */
+.btn-pop {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-bold uppercase tracking-wide text-bg transition duration-200;
+  box-shadow: 5px 5px 0 0 var(--pop-shadow, #6272a4);
+}
+.btn-pop:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 0 var(--pop-shadow, #6272a4); }
+.btn-pop:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 0 var(--pop-shadow, #6272a4); }
+
+/* Floating decorative shapes */
+.float-slow { animation: float 7s ease-in-out infinite; }
+.float-slower { animation: float 10s ease-in-out infinite reverse; }
+@keyframes float { 50% { transform: translateY(-14px) rotate(4deg); } }
+
+/* Marquee */
+.marquee { mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.marquee-track { display: flex; width: max-content; animation: marquee var(--marquee-speed, 40s) linear infinite; }
+.marquee-reverse .marquee-track { animation-direction: reverse; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .text-gradient-animated, .aurora-blob, .float-slow, .float-slower, .marquee-track { animation: none !important; }
+}

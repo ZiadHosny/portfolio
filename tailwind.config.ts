@@ -15,6 +15,9 @@ const config: Config = {
         muted: "#a9b0d4",
         cyan: "#8be9fd",
         green: "#50fa7b",
+        pink: "#ff79c6",
+        orange: "#ffb86c",
+        yellow: "#f1fa8c",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
