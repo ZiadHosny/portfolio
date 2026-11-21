@@ -75,7 +75,7 @@ export const ZButton = ({
         {document ? content : <a href={direction}>{content}</a>}
       </button>
       <Dialog
-        PaperProps={{ style: dialogProps }}
+        slotProps={{ paper: { style: dialogProps } }}
         open={open}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"

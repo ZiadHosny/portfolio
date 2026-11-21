@@ -1,6 +1,8 @@
 import * as Si from "react-icons/si";
 import * as Tb from "react-icons/tb";
 import * as Gr from "react-icons/gr";
+import * as Di from "react-icons/di";
+import * as Vsc from "react-icons/vsc";
 
 //Languages
 export const Js = () => <Si.SiJavascript />;
@@ -21,7 +23,7 @@ export const JWT = () => <Si.SiJsonwebtokens />;
 // Database
 export const Postgresql = () => <Si.SiPostgresql />;
 export const Mongodb = () => <Si.SiMongodb />;
-export const MicrosoftSqlServer = () => <Si.SiMicrosoftsqlserver />;
+export const MicrosoftSqlServer = () => <Di.DiMsqlServer />;
 export const Sql = () => <Gr.GrMysql />;
 export const Firebase = () => <Si.SiFirebase />;
 
@@ -31,7 +33,7 @@ export const Next = () => <Tb.TbBrandNextjs />;
 export const Angular = () => <Si.SiAngular />;
 export const Redux = () => <Si.SiRedux />;
 export const Html5 = () => <Si.SiHtml5 />;
-export const Css3 = () => <Si.SiCss3 />;
+export const Css3 = () => <Si.SiCss />;
 export const Mui = () => <Si.SiMui />;
 export const Jest = () => <Si.SiJest />;
 export const ChakraUi = () => <Si.SiChakraui />;
@@ -49,7 +51,7 @@ export const Axios = () => <Si.SiAxios />;
 //tools
 export const Docker = () => <Si.SiDocker />;
 export const WordPress = () => <Si.SiWordpress />;
-export const OracleApex = () => <Si.SiOracle />;
+export const OracleApex = () => <Gr.GrOracle />;
 export const Postman = () => <Si.SiPostman />;
 export const Sentry = () => <Si.SiSentry />;
 export const Git = () => <Si.SiGit />;
@@ -58,6 +60,6 @@ export const GithubActions = () => <Si.SiGithubactions />;
 export const Gitlab = () => <Si.SiGitlab />;
 export const Npm = () => <Si.SiNpm />;
 export const Figma = () => <Si.SiFigma />;
-export const Canva = () => <Si.SiCanva />;
+export const Canva = () => <Tb.TbPalette />;
 export const Notion = () => <Si.SiNotion />;
-export const VSCode = () => <Si.SiVisualstudiocode />;
+export const VSCode = () => <Vsc.VscVscode />;

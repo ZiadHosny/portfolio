@@ -1,9 +1,9 @@
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import { TbBrandCodepen } from "react-icons/tb";
 import {
   SiLeetcode,
   SiFreecodecamp,
   SiHackerrank,
-  SiCodepen,
   SiWhatsapp,
   SiLinktree,
 } from "react-icons/si";
@@ -40,7 +40,7 @@ export const Footer = () => {
         />
         <FooterIcon
           href="https://codepen.io/ziadhosny"
-          icon={<SiCodepen size={25} />}
+          icon={<TbBrandCodepen size={25} />}
         />
         <FooterIcon
           href="https://linktr.ee/ziadhosny"
