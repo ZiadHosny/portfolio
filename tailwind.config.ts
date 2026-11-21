@@ -1,34 +1,27 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}", // Note the addition of the `app` directory.
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
-        // Main
-        mainLight: "#ebbcba",
-        mainDark: "#1f1d2e",
-        // Accent
-        accent: "#31748f",
-        accentLight: "#7bb8d1",
-        accentDark: "#28485f",
-        // Clear
-        clearLight: "#ebbcba9f",
-        clearWhite: "#eeeeee",
+        // Dracula
+        bg: "#282a36",
+        "bg-deep": "#1e1f29",
+        surface: "#44475a",
+        comment: "#6272a4",
+        purple: "#bd93f9",
+        fg: "#f8f8f2",
+        muted: "#a9b0d4",
+        cyan: "#8be9fd",
+        green: "#50fa7b",
       },
-      fontSize: {
-        mainHeading: "40px",
-        subHeading: "25px",
-        medium: "20px",
-        normal: "16px",
-        small: "14px",
+      fontFamily: {
+        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+      },
+      maxWidth: {
+        page: "72rem",
       },
     },
   },
