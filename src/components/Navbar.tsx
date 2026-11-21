@@ -39,10 +39,21 @@ export const Navbar = () => {
     };
   }, []);
 
-  // Move the sliding indicator under the active link
+  // Move the sliding indicator under the active link.
+  // Measured against the <ul> with getBoundingClientRect (offsetLeft would be relative to the <li>).
   useLayoutEffect(() => {
-    const el = listRef.current?.querySelector<HTMLAnchorElement>(`a[href="#${active}"]`);
-    setPill(el ? { left: el.offsetLeft, width: el.offsetWidth } : null);
+    const measure = () => {
+      const list = listRef.current;
+      const el = list?.querySelector<HTMLAnchorElement>(`a[href="#${active}"]`);
+      if (!list || !el) return setPill(null);
+      const l = list.getBoundingClientRect();
+      const r = el.getBoundingClientRect();
+      setPill({ left: r.left - l.left - list.clientLeft, width: r.width }); // clientLeft = border width
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    document.fonts?.ready.then(measure);
+    return () => window.removeEventListener("resize", measure);
   }, [active]);
 
   useEffect(() => {
@@ -53,7 +64,7 @@ export const Navbar = () => {
   }, [open]);
 
   const island = `border border-white/10 backdrop-blur-xl transition duration-300 ${
-    scrolled || open ? "bg-bg-deep/75 shadow-[0_8px_30px_-10px_rgb(0_0_0_/_0.6)]" : "bg-white/[0.03]"
+    scrolled || open ? "bg-bg-deep/90 shadow-[0_8px_30px_-10px_rgb(0_0_0_/_0.6)]" : "bg-white/[0.03]"
   }`;
 
   return (
