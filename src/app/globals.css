@@ -228,3 +228,13 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .spin-slow { animation: none !important; }
 }
+
+/* ───────────── Simple (variant D) ───────────── */
+html:not(.js) .preloader,
+html.intro-skip .preloader { display: none !important; }
+
+.dot-grid {
+  background-image: radial-gradient(rgb(248 248 242 / 0.09) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse 80% 70% at 60% 30%, #000 20%, transparent 75%);
+}

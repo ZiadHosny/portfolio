@@ -4,9 +4,13 @@ import { Magnetic, Reveal } from "./Motion";
 import { site } from "@/lib/site";
 
 /** Big closing call-to-action before the footer. */
-export const ContactCTA = () => (
+export const ContactCTA = ({ aurora = true }: { aurora?: boolean } = {}) => (
   <section className="relative isolate overflow-hidden py-24 sm:py-32" aria-labelledby="cta-title">
-    <Aurora className="opacity-80" />
+    {aurora ? (
+      <Aurora className="opacity-80" />
+    ) : (
+      <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_60%,rgb(189_147_249_/_0.18),transparent_70%)]" aria-hidden="true" />
+    )}
     <div className="container-page relative text-center">
       <Reveal>
         <p className="font-mono text-sm text-pink">06 / Contact</p>

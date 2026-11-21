@@ -17,7 +17,8 @@ export default function PreviewLayout({ children }: { children: React.ReactNode 
       >
         <Link href="/preview/hero-a" className="rounded-full px-4 py-2 hover:bg-white/10">A<span className="hidden sm:inline"> · Aurora Split</span></Link>
         <Link href="/preview/hero-b" className="rounded-full px-4 py-2 hover:bg-white/10">B<span className="hidden sm:inline"> · Center Stage</span></Link>
-        <Link href="/preview/creative" className="rounded-full bg-pink px-4 py-2 text-bg hover:bg-purple">C<span className="hidden sm:inline"> · Creative (full page)</span><span className="sm:hidden"> · Creative</span></Link>
+        <Link href="/preview/creative" className="rounded-full px-4 py-2 hover:bg-white/10">C<span className="hidden sm:inline"> · Creative (full page)</span><span className="sm:hidden"> · Creative</span></Link>
+        <Link href="/preview/simple" className="rounded-full bg-purple px-4 py-2 text-bg hover:bg-pink">D<span className="hidden sm:inline"> · Simple</span></Link>
       </nav>
     </>
   );
