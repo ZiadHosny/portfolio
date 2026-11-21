@@ -1,13 +1,16 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { SiGoogleplay } from "react-icons/si";
 import { projects } from "@/lib/data/projects";
 
-export const Projects = () => (
+export const Projects = ({ heading }: { heading?: ReactNode } = {}) => (
   <section id="projects" className="section" aria-labelledby="projects-title">
-    <h2 id="projects-title" className="section-title" data-reveal>
-      Projects
-    </h2>
+    {heading ?? (
+      <h2 id="projects-title" className="section-title" data-reveal>
+        Projects
+      </h2>
+    )}
 
     <div className="mt-10 grid gap-6 sm:grid-cols-2">
       {projects.map((p, i) => (
