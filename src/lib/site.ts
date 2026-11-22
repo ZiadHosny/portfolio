@@ -17,7 +17,7 @@ export const site = {
 /** Hero counters. Update `videos` when new videos are published. */
 export const stats = [
   { value: 5, suffix: "+", label: "Years of experience" },
-  { value: 73, suffix: "", label: "Projects on GitHub" },
+  { value: 70, suffix: "+", label: "Projects on GitHub" },
   { value: 18, suffix: "", label: "Videos on YouTube" },
 ];
 
