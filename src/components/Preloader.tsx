@@ -7,10 +7,10 @@ import { finishIntro } from "./intro";
 export const INTRO_KEY = "zh-intro-seen";
 
 /**
- * How long the 0→100 counter runs. TEMPORARILY LONG so the intro can be reviewed;
- * set back to ~1000 for the final version.
+ * How long the 0→100 counter runs. Total time on screen ≈ INTRO_MS + 250ms hold + 800ms curtain
+ * exit, so 2000 ≈ 3 seconds.
  */
-const INTRO_MS = 4000;
+const INTRO_MS = 2000;
 
 /**
  * Intro: counter 0→100 + name, then the curtain slides up.
