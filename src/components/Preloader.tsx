@@ -7,7 +7,13 @@ import { finishIntro } from "./intro";
 export const INTRO_KEY = "zh-intro-seen";
 
 /**
- * Short intro (≈1.3s): counter 0→100 + name, then the curtain slides up.
+ * How long the 0→100 counter runs. TEMPORARILY LONG so the intro can be reviewed;
+ * set back to ~1000 for the final version.
+ */
+const INTRO_MS = 4000;
+
+/**
+ * Intro: counter 0→100 + name, then the curtain slides up.
  * Rendered on the server so there is no flash of the page before it. An inline <head> script adds
  * `intro-skip` to <html> before first paint when it was already seen this session, when the user
  * prefers reduced motion, or when JS is off (no `.js` class) — CSS then hides it.
@@ -33,16 +39,18 @@ export const Preloader = () => {
       document.documentElement.style.overflow = "";
     };
     const tick = (t: number) => {
-      const p = Math.min(1, (t - start) / 1000);
+      const p = Math.min(1, (t - start) / INTRO_MS);
       setN(Math.round((1 - Math.pow(1 - p, 3)) * 100));
       if (p < 1) raf = requestAnimationFrame(tick);
       else timer = window.setTimeout(finish, 250);
     };
     raf = requestAnimationFrame(tick);
+    // Cleanup must only cancel. React dev (StrictMode) runs effect → cleanup → effect on mount,
+    // and calling finish() here used to dismiss the curtain immediately.
     return () => {
       cancelAnimationFrame(raf);
       clearTimeout(timer);
-      finish();
+      document.documentElement.style.overflow = "";
     };
   }, []);
 
