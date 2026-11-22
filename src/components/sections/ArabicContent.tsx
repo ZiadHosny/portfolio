@@ -1,6 +1,5 @@
 import { FiArrowUpRight, FiDatabase, FiLayers, FiList, FiPlay } from "react-icons/fi";
 import { SiYoutube } from "react-icons/si";
-import { TbTopologyStar3 } from "react-icons/tb";
 import { LiteYouTube } from "../LiteYouTube";
 import { CountUp } from "../fx/CountUp";
 import { Reveal, SectionHeading } from "../Motion";
@@ -8,13 +7,34 @@ import { stats, youtube } from "@/lib/site";
 
 const videos = stats.find((s) => s.label.includes("Videos"));
 
-const topics = [
-  { name: "System Design", Icon: TbTopologyStar3, className: "bg-purple" },
-  { name: "Databases", Icon: FiDatabase, className: "bg-cyan" },
-  { name: "Design Patterns", Icon: FiLayers, className: "bg-green" },
+const playlists = [
+  {
+    title: "System Design in Arabic",
+    href: youtube.systemDesignPlaylist,
+    Icon: FiList,
+    icon: "bg-cyan",
+    text: "text-cyan",
+    hover: "hover:border-cyan/60",
+  },
+  {
+    title: "Advanced Database in Arabic",
+    href: youtube.advancedDatabasePlaylist,
+    Icon: FiDatabase,
+    icon: "bg-purple",
+    text: "text-purple",
+    hover: "hover:border-purple/60",
+  },
+  {
+    title: "Design Patterns in Arabic",
+    href: youtube.designPatternsPlaylist,
+    Icon: FiLayers,
+    icon: "bg-green",
+    text: "text-green",
+    hover: "hover:border-green/60",
+  },
 ];
 
-/** Arabic Content as a bento grid: big Short + channel + playlist + topics. */
+/** Arabic Content as a bento grid: big Short + channel + playlists. */
 export const ArabicContent = () => (
   <section id="content" className="section" aria-labelledby="content-title">
     <SectionHeading index="03" kicker="YouTube" title="Arabic Content" id="content-title" />
@@ -79,41 +99,36 @@ export const ArabicContent = () => (
         </a>
       </Reveal>
 
-      {/* Playlist */}
-      <Reveal from="up" delay={0.15}>
-        <a
-          href={youtube.systemDesignPlaylist}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="glass group flex h-full flex-col justify-between gap-6 p-6 transition hover:-translate-y-1 hover:border-cyan/60"
-          data-spotlight
-        >
-          <span className="grid h-12 w-12 place-items-center rounded-xl bg-cyan text-bg">
-            <FiList size={22} aria-hidden="true" />
-          </span>
-          <div>
-            <p className="font-mono text-xs uppercase tracking-wider text-cyan">Playlist</p>
-            <h3 className="mt-1 text-xl font-bold leading-tight">System Design in Arabic</h3>
-            <span className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-cyan">
-              Watch <FiArrowUpRight className="transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
-            </span>
-          </div>
-        </a>
-      </Reveal>
-
-      {/* Topics */}
-      <Reveal from="up" delay={0.2}>
-        <div className="glass flex h-full flex-col justify-between gap-5 p-6" data-spotlight>
-          <p className="font-mono text-xs uppercase tracking-wider text-muted">Topics</p>
-          <ul className="flex flex-col gap-2.5">
-            {topics.map(({ name, Icon, className }) => (
-              <li key={name} className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-bold text-bg ${className}`}>
-                <Icon aria-hidden="true" /> {name}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Reveal>
+      {/* Playlists */}
+      <div className="grid gap-5 sm:grid-cols-2 md:col-span-2">
+        {playlists.map(({ title, href, Icon, icon, text, hover }, i) => (
+          <Reveal
+            key={title}
+            from="up"
+            delay={0.15 + i * 0.07}
+            className={playlists.length % 2 && i === playlists.length - 1 ? "sm:col-span-2" : ""}
+          >
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`glass group flex h-full flex-col justify-between gap-6 p-6 transition hover:-translate-y-1 ${hover}`}
+              data-spotlight
+            >
+              <span className={`grid h-12 w-12 place-items-center rounded-xl text-bg ${icon}`}>
+                <Icon size={22} aria-hidden="true" />
+              </span>
+              <div>
+                <p className={`font-mono text-xs uppercase tracking-wider ${text}`}>Playlist</p>
+                <h3 className="mt-1 text-xl font-bold leading-tight">{title}</h3>
+                <span className={`mt-3 inline-flex items-center gap-1 text-sm font-semibold ${text}`}>
+                  Watch <FiArrowUpRight className="transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" aria-hidden="true" />
+                </span>
+              </div>
+            </a>
+          </Reveal>
+        ))}
+      </div>
     </div>
   </section>
 );

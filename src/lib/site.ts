@@ -17,7 +17,7 @@ export const site = {
 /** Hero counters. Update `videos` when new videos are published. */
 export const stats = [
   { value: 5, suffix: "+", label: "Years of experience" },
-  { value: 70, suffix: "+", label: "Projects on GitHub" },
+  { value: 73, suffix: "", label: "Projects on GitHub" },
   { value: 18, suffix: "", label: "Videos on YouTube" },
 ];
 
@@ -25,6 +25,10 @@ export const youtube = {
   channel: "https://www.youtube.com/@ziadhosnydev",
   systemDesignPlaylist:
     "https://www.youtube.com/playlist?list=PLXff1uLxiPdA",
+  advancedDatabasePlaylist:
+    "https://www.youtube.com/playlist?list=PLDjCRhPEr6qc",
+  designPatternsPlaylist:
+    "https://www.youtube.com/playlist?list=PLc8zIezANQeU",
 };
 
 export type SocialKey =
