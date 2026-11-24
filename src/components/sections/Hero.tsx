@@ -56,19 +56,19 @@ export const Hero = () => {
   <section id="top" className="relative isolate overflow-hidden">
     {/* one soft gradient + faint dot grid, no heavy effects */}
     <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
-      <div className="float-slower absolute -right-40 -top-40 h-[36rem] w-[36rem] rounded-full bg-[radial-gradient(circle,rgb(189_147_249_/_0.28),transparent_65%)]" />
+      <div className="float-slower absolute -right-40 -top-40 h-[24rem] w-[24rem] sm:h-[36rem] sm:w-[36rem] rounded-full bg-[radial-gradient(circle,rgb(189_147_249_/_0.28),transparent_65%)]" />
       <div className="absolute -bottom-40 -left-40 h-[30rem] w-[30rem] rounded-full bg-[radial-gradient(circle,rgb(255_121_198_/_0.14),transparent_65%)]" />
       <div className="dot-grid absolute inset-0" />
     </div>
 
-    <div className="container-page flex min-h-[100svh] flex-col justify-center pb-12 pt-[calc(var(--nav-h)+3rem)]">
+    <div className="container-page flex min-h-[100svh] flex-col justify-center pb-12 pt-[calc(var(--nav-h)+2rem)] sm:pt-[calc(var(--nav-h)+3rem)]">
       <div className="flex flex-col-reverse items-start gap-10 lg:flex-row lg:items-center lg:justify-between">
         <div className="w-full">
           <m.p {...fadeUp(BASE, go)} className="font-mono text-sm text-muted">
             <span className="text-green">●</span> Software engineer based in {site.country}
           </m.p>
 
-          <h1 className="mt-4 text-[clamp(3.6rem,11vw,8.5rem)] font-black leading-[0.9] tracking-[-0.045em]">
+          <h1 className="mt-4 text-[clamp(3.2rem,14vw,8.5rem)] font-black leading-[0.9] tracking-[-0.045em]">
             <MaskLine go={go} delay={BASE + 0.1}>Ziad</MaskLine>
             <MaskLine go={go} delay={BASE + 0.2} className="text-gradient-animated">
               Hosny.
@@ -79,7 +79,7 @@ export const Hero = () => {
             <TypedLine
               lines={typedLines}
               prefix={<span className="mr-2 text-pink">/</span>}
-              className="mt-6 min-h-[1.6em] font-mono text-lg text-fg sm:text-2xl"
+              className="mt-6 min-h-[1.6em] font-mono text-base text-fg min-[400px]:text-lg sm:text-2xl"
             />
           </m.div>
 

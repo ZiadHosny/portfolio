@@ -13,7 +13,7 @@ const MarqueeRow = ({ items, reverse }: { items: Skill[]; reverse?: boolean }) =
   <div className={`marquee py-2 ${reverse ? "marquee-reverse" : ""}`} aria-hidden="true">
     <div className="marquee-track gap-4 [--marquee-speed:45s]">
       {[...items, ...items].map(({ name, Icon }, i) => (
-        <span key={i} className="glass flex shrink-0 items-center gap-3 !rounded-2xl px-5 py-3.5 text-lg font-bold">
+        <span key={i} className="flex shrink-0 items-center gap-3 rounded-2xl border border-white/10 bg-bg px-4 py-3 text-base font-bold sm:px-5 sm:py-3.5 sm:text-lg">
           <Icon className={["text-purple", "text-pink", "text-cyan", "text-green"][i % 4]} size={26} />
           {name}
         </span>
@@ -50,7 +50,7 @@ export const Skills = () => (
           delay={(gi % 2) * 0.08}
           className={gi === skillGroups.length - 1 && skillGroups.length % 2 ? "lg:col-span-2" : ""}
         >
-          <div className="glass h-full p-6 sm:p-7" data-spotlight>
+          <div className="glass h-full !bg-bg/80 !backdrop-blur-none p-6 sm:p-7" data-spotlight>
             <h3 className="flex items-center gap-3 text-xl font-bold">
               <span className={`grid h-10 w-10 place-items-center rounded-xl text-bg ${POP[gi % POP.length]}`} aria-hidden="true">
                 {g.icon}

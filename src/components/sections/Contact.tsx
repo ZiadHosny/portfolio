@@ -11,7 +11,7 @@ export const Contact = () => (
         <p className="font-mono text-sm text-pink">06 / Contact</p>
       </Reveal>
       <Reveal from="rotate" delay={0.05}>
-        <h2 id="cta-title" className="mx-auto mt-4 max-w-4xl text-[clamp(2.8rem,8vw,6.5rem)] font-black leading-[0.95] tracking-[-0.04em]">
+        <h2 id="cta-title" className="mx-auto mt-4 max-w-4xl text-[clamp(2.3rem,9vw,6.5rem)] font-black leading-[0.95] tracking-[-0.04em]">
           Let&apos;s build something <span className="text-gradient-animated">great.</span>
         </h2>
       </Reveal>

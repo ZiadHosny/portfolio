@@ -29,9 +29,15 @@ export const metadata: Metadata = {
     "React",
     "Next.js",
     "TypeScript",
+    "Software Engineer Egypt",
+    "Backend Developer",
     "System Design in Arabic",
+    "System Design بالعربي",
+    "زياد حسني",
+    "مهندس برمجيات",
     "Egypt",
   ],
+  category: "technology",
   alternates: { canonical: "/" },
   openGraph: {
     type: "profile",
@@ -42,16 +48,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     firstName: "Ziad",
     lastName: "Hosny",
-    images: [{ url: site.photoSquare, width: 400, height: 400, alt: site.name }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     site: "@ziadhosnydev",
     creator: "@ziadhosnydev",
     title: fullTitle,
     description: site.shortDescription,
-    images: [{ url: site.photoSquare, alt: site.name }],
   },
+  verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "48x48" },
@@ -61,10 +66,16 @@ export const metadata: Metadata = {
     apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
   manifest: "/manifest.webmanifest",
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
 };
 
 export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
   themeColor: "#282a36",
   colorScheme: "dark",
 };
