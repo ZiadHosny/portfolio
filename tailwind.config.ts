@@ -20,7 +20,8 @@ const config: Config = {
         yellow: "#f1fa8c",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "system-ui", "sans-serif"],
+        // --font-arabic only exists on /ar; the fallback keeps the English pages unchanged
+        sans: ["var(--font-sans)", "var(--font-arabic, system-ui)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
       },
       maxWidth: {

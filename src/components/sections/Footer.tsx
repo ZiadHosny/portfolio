@@ -2,15 +2,19 @@ import { FiMail } from "react-icons/fi";
 import { Logo } from "../Logo";
 import { socialIcons } from "../SocialIcon";
 import { site, socials } from "@/lib/site";
+import { getDict, type Locale } from "@/lib/i18n";
 
 // Evaluated at build time (static page), e.g. "Nov 2026"
-const lastUpdated = new Intl.DateTimeFormat("en-US", {
-  month: "short",
-  year: "numeric",
-  timeZone: "Africa/Cairo",
-}).format(new Date());
+const lastUpdated = (locale: Locale) =>
+  new Intl.DateTimeFormat(getDict(locale).footer.intlLocale, {
+    month: "short",
+    year: "numeric",
+    timeZone: "Africa/Cairo",
+  }).format(new Date());
 
-export const Footer = () => (
+export const Footer = ({ locale }: { locale: Locale }) => {
+  const t = getDict(locale).footer;
+  return (
   <footer className="mt-8 border-t border-surface/60 bg-bg-deep/70">
     <div className="container-page flex flex-col items-center gap-6 py-10 text-center">
       <div className="flex items-center gap-2.5 font-semibold">
@@ -22,7 +26,7 @@ export const Footer = () => (
         <FiMail aria-hidden="true" /> {site.email}
       </a>
 
-      <ul className="flex max-w-xl flex-wrap justify-center gap-2" aria-label="Social links">
+      <ul className="flex max-w-xl flex-wrap justify-center gap-2" aria-label={t.social}>
         {socials.map(({ key, label, href }) => {
           const Icon = socialIcons[key];
           return (
@@ -43,8 +47,9 @@ export const Footer = () => (
       </ul>
 
       <p className="text-xs text-comment">
-        © {new Date().getFullYear()} {site.name} · Last updated: {lastUpdated}
+        © {new Date().getFullYear()} {locale === "ar" ? "زياد حسني" : site.name} · {t.updated}: {lastUpdated(locale)}
       </p>
     </div>
   </footer>
-);
+  );
+};

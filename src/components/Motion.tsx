@@ -8,8 +8,8 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 const FROM = {
   up: { y: 70 },
   down: { y: -50 },
-  left: { x: -90 },
-  right: { x: 90 },
+  left: { x: -60 },
+  right: { x: 60 },
   scale: { scale: 0.8, y: 30 },
   rotate: { rotate: -6, y: 60, scale: 0.95 },
 } as const;
@@ -39,7 +39,7 @@ export const Reveal = ({ children, from = "up", delay = 0, className, amount = 0
 export const SectionHeading = ({ index, kicker, title, id }: { index: string; kicker: string; title: string; id: string }) => (
   <div className="relative">
     <span
-      className="text-outline pointer-events-none absolute -top-10 right-0 select-none text-[clamp(6rem,18vw,14rem)] font-black leading-none sm:-top-16"
+      className="text-outline pointer-events-none absolute -top-10 end-0 select-none text-[clamp(5rem,18vw,14rem)] font-black leading-none sm:-top-16"
       aria-hidden="true"
     >
       {index}
@@ -55,7 +55,7 @@ export const SectionHeading = ({ index, kicker, title, id }: { index: string; ki
     </m.p>
     <h2 id={id} className="mt-2 overflow-hidden pb-2">
       <m.span
-        className="text-gradient-animated block text-[clamp(2.6rem,7.5vw,5.75rem)] font-black leading-[0.95] tracking-[-0.035em]"
+        className="text-gradient-animated block text-[clamp(2.1rem,9vw,5.75rem)] font-black leading-[0.95] tracking-[-0.035em]"
         initial={{ y: "105%" }}
         whileInView={{ y: 0 }}
         viewport={{ once: true }}
