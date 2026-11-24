@@ -3,17 +3,23 @@ import type { ReactNode } from "react";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import { SiGoogleplay } from "react-icons/si";
 import { projects } from "@/lib/data/projects";
+import { projectsAr } from "@/lib/data/ar";
+import { getDict, type Locale } from "@/lib/i18n";
 
-export const Projects = ({ heading }: { heading?: ReactNode } = {}) => (
+export const Projects = ({ heading, locale = "en" }: { heading?: ReactNode; locale?: Locale }) => {
+  const t = getDict(locale);
+  return (
   <section id="projects" className="section" aria-labelledby="projects-title">
     {heading ?? (
       <h2 id="projects-title" className="section-title" data-reveal>
-        Projects
+        {t.sections.projects.title}
       </h2>
     )}
 
     <div className="mt-10 grid gap-6 sm:grid-cols-2">
-      {projects.map((p, i) => (
+      {projects.map((base, i) => {
+      const p = locale === "ar" ? { ...base, ...projectsAr[base.title] } : base;
+      return (
         <article
           key={p.title}
           className="card card-hover group flex flex-col overflow-hidden"
@@ -36,7 +42,7 @@ export const Projects = ({ heading }: { heading?: ReactNode } = {}) => (
             <h3 className="text-lg font-semibold">{p.title}</h3>
             <p className="mt-2 text-sm leading-relaxed text-muted">{p.description}</p>
 
-            <ul className="mt-4 flex flex-wrap gap-1.5" aria-label="Tech stack">
+            <ul className="mt-4 flex flex-wrap gap-1.5" aria-label={t.projects.stack}>
               {p.stack.map((s) => (
                 <li key={s} className="tag">
                   {s}
@@ -47,23 +53,25 @@ export const Projects = ({ heading }: { heading?: ReactNode } = {}) => (
             <div className="mt-auto flex flex-wrap gap-2 pt-5">
               {p.live && (
                 <a href={p.live} target="_blank" rel="noopener noreferrer" className="btn-primary !py-2">
-                  <FiExternalLink aria-hidden="true" /> Live
+                  <FiExternalLink aria-hidden="true" /> {t.projects.live}
                 </a>
               )}
               {p.code && (
                 <a href={p.code} target="_blank" rel="noopener noreferrer" className="btn-ghost !py-2">
-                  <FiGithub aria-hidden="true" /> Code
+                  <FiGithub aria-hidden="true" /> {t.projects.code}
                 </a>
               )}
               {p.googlePlay && (
                 <a href={p.googlePlay} target="_blank" rel="noopener noreferrer" className="btn-ghost !py-2">
-                  <SiGoogleplay aria-hidden="true" /> Google Play
+                  <SiGoogleplay aria-hidden="true" /> {t.projects.googlePlay}
                 </a>
               )}
             </div>
           </div>
         </article>
-      ))}
+      );
+      })}
     </div>
   </section>
-);
+  );
+};

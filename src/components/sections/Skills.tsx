@@ -1,6 +1,7 @@
 import { ShowMore } from "../ShowMore";
 import { Reveal, SectionHeading } from "../Motion";
 import { skillGroups, type Skill } from "@/lib/data/skills";
+import { getDict, type Locale } from "@/lib/i18n";
 
 // v1-style solid chips with an offset shadow, cycling Dracula colors
 const POP = ["bg-purple", "bg-pink", "bg-cyan", "bg-green", "bg-orange", "bg-yellow"];
@@ -10,7 +11,7 @@ const rowA = [...byTitle("Frontend").top, ...byTitle("AI").top];
 const rowB = [...byTitle("Backend").top, ...byTitle("Databases").top, ...byTitle("Tools").top.slice(0, 5)];
 
 const MarqueeRow = ({ items, reverse }: { items: Skill[]; reverse?: boolean }) => (
-  <div className={`marquee py-2 ${reverse ? "marquee-reverse" : ""}`} aria-hidden="true">
+  <div dir="ltr" className={`marquee py-2 ${reverse ? "marquee-reverse" : ""}`} aria-hidden="true">
     <div className="marquee-track gap-4 [--marquee-speed:45s]">
       {[...items, ...items].map(({ name, Icon }, i) => (
         <span key={i} className="flex shrink-0 items-center gap-3 rounded-2xl border border-white/10 bg-bg px-4 py-3 text-base font-bold sm:px-5 sm:py-3.5 sm:text-lg">
@@ -31,10 +32,12 @@ const Chip = ({ name, Icon, i }: Skill & { i: number }) => (
   </li>
 );
 
-export const Skills = () => (
+export const Skills = ({ locale }: { locale: Locale }) => {
+  const t = getDict(locale);
+  return (
   <section id="skills" className="overflow-hidden py-16 sm:py-24" aria-labelledby="skills-title">
     <div className="container-page">
-      <SectionHeading index="04" kicker="Toolbox" title="Skills" id="skills-title" />
+      <SectionHeading index="04" kicker={t.sections.skills.kicker} title={t.sections.skills.title} id="skills-title" />
     </div>
 
     <div className="mt-12 -rotate-1 space-y-3">
@@ -55,7 +58,7 @@ export const Skills = () => (
               <span className={`grid h-10 w-10 place-items-center rounded-xl text-bg ${POP[gi % POP.length]}`} aria-hidden="true">
                 {g.icon}
               </span>
-              {g.title}
+              {t.skills.groups[g.title] ?? g.title}
             </h3>
             <ul className="mt-5 flex flex-wrap gap-2.5">
               {g.top.map((s, i) => (
@@ -63,7 +66,7 @@ export const Skills = () => (
               ))}
             </ul>
             {g.more.length > 0 && (
-              <ShowMore count={g.more.length}>
+              <ShowMore count={g.more.length} locale={locale}>
                 <ul className="mt-2.5 flex flex-wrap gap-2.5">
                   {g.more.map((s, i) => (
                     <Chip key={s.name} {...s} i={i + gi + 3} />
@@ -76,4 +79,5 @@ export const Skills = () => (
       ))}
     </div>
   </section>
-);
+  );
+};

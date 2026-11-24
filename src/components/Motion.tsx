@@ -39,7 +39,7 @@ export const Reveal = ({ children, from = "up", delay = 0, className, amount = 0
 export const SectionHeading = ({ index, kicker, title, id }: { index: string; kicker: string; title: string; id: string }) => (
   <div className="relative">
     <span
-      className="text-outline pointer-events-none absolute -top-10 right-0 select-none text-[clamp(5rem,18vw,14rem)] font-black leading-none sm:-top-16"
+      className="text-outline pointer-events-none absolute -top-10 end-0 select-none text-[clamp(5rem,18vw,14rem)] font-black leading-none sm:-top-16"
       aria-hidden="true"
     >
       {index}

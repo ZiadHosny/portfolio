@@ -3,9 +3,12 @@ import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 import { Logo } from "./Logo";
 import { navLinks, site } from "@/lib/site";
+import { getDict, localePath, type Locale } from "@/lib/i18n";
 
 /** Floating "island" navbar: glass pills, active-section indicator that slides between links. */
-export const Navbar = () => {
+export const Navbar = ({ locale }: { locale: Locale }) => {
+  const t = getDict(locale);
+  const other: Locale = locale === "ar" ? "en" : "ar";
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState<string>("");
@@ -69,10 +72,10 @@ export const Navbar = () => {
 
   return (
     <header className="fixed inset-x-0 top-3 z-50">
-      <nav className="container-page flex h-[calc(var(--nav-h)-12px)] items-center justify-between gap-3" aria-label="Main">
+      <nav className="container-page flex h-[calc(var(--nav-h)-12px)] items-center justify-between gap-3" aria-label={locale === "ar" ? "التنقّل الرئيسي" : "Main"}>
         <a
           href="#top"
-          className={`flex h-full items-center gap-2.5 rounded-full py-1.5 pl-1.5 pr-4 font-semibold hover:border-purple/50 ${island}`}
+          className={`flex h-full items-center gap-2.5 rounded-full py-1.5 ps-1.5 pe-4 font-semibold hover:border-purple/50 ${island}`}
           onClick={() => setOpen(false)}
         >
           <Logo size={34} title="" />
@@ -94,16 +97,26 @@ export const Navbar = () => {
                   active === l.id ? "text-bg" : "text-fg/80 hover:text-purple"
                 }`}
               >
-                {l.label}
+                {t.nav[l.id]}
               </a>
             </li>
           ))}
         </ul>
 
+        <a
+          href={localePath(other)}
+          hrefLang={other}
+          lang={other}
+          title={t.switchTitle}
+          className={`ms-auto me-2 flex h-full items-center rounded-full px-4 text-sm font-semibold hover:border-purple/50 hover:text-purple md:ms-0 md:me-0 ${island}`}
+        >
+          {t.switchLabel}
+        </a>
+
         <button
           type="button"
           className={`grid h-full aspect-square place-items-center rounded-full text-fg md:hidden ${island}`}
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? t.closeMenu : t.openMenu}
           aria-expanded={open}
           aria-controls="mobile-menu"
           onClick={() => setOpen((o) => !o)}
@@ -126,7 +139,7 @@ export const Navbar = () => {
                   active === l.id ? "bg-purple text-bg" : "text-fg/85 hover:bg-white/5"
                 }`}
               >
-                {l.label}
+                {t.nav[l.id]}
               </a>
             </li>
           ))}
