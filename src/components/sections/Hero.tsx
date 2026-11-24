@@ -69,10 +69,11 @@ export const Hero = () => {
           </m.p>
 
           <h1 className="mt-4 text-[clamp(3.2rem,14vw,8.5rem)] font-black leading-[0.9] tracking-[-0.045em]">
-            <MaskLine go={go} delay={BASE + 0.1}>Ziad</MaskLine>
+            <MaskLine go={go} delay={BASE + 0.1}>Ziad</MaskLine>{" "}
             <MaskLine go={go} delay={BASE + 0.2} className="text-gradient-animated">
               Hosny.
             </MaskLine>
+            <span className="sr-only"> - {site.title}</span>
           </h1>
 
           <m.div {...fadeUp(BASE + 0.45, go)}>
