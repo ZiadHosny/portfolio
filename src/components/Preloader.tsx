@@ -11,6 +11,8 @@ export const INTRO_KEY = "zh-intro-seen";
  * exit, so 2000 ≈ 3 seconds.
  */
 const INTRO_MS = 2000;
+/** The counter always runs at least this long after the page becomes interactive. */
+const MIN_MS = 600;
 
 /**
  * Intro: counter 0→100 + name, then the curtain slides up.
@@ -30,7 +32,12 @@ export const Preloader = () => {
     } catch {}
 
     document.documentElement.style.overflow = "hidden";
-    const start = performance.now();
+    // Count from when the page started loading, not from hydration: on a slow phone the JS can take
+    // seconds to boot, and starting the 2s counter only then made visitors wait load time + 3s.
+    // Fast devices see the same intro as before; slow ones never wait less than MIN_MS.
+    const now = performance.now();
+    const p0 = Math.min(now / INTRO_MS, 1 - MIN_MS / INTRO_MS);
+    const start = now - p0 * INTRO_MS;
     let raf = 0;
     let timer = 0;
     const finish = () => {

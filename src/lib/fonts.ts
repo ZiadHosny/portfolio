@@ -1,17 +1,7 @@
-import { Inter, JetBrains_Mono, Noto_Kufi_Arabic } from "next/font/google";
-
-export const inter = Inter({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
-export const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });
+import { JetBrains_Mono } from "next/font/google";
 
 /**
- * Arabic glyphs only. On /ar, Latin text (Node.js, React…) uses JetBrains Mono and Arabic uses
- * this font, for a bold "code" look. To try another Arabic font, change only this line
- * (e.g. Changa, Tajawal, Readex_Pro, Cairo).
+ * Shared by both languages. Language-specific fonts live in fonts-en.ts / fonts-ar.ts and are
+ * imported only by their own layout, so each page preloads only the fonts it uses.
  */
-export const arabic = Noto_Kufi_Arabic({
-  subsets: ["arabic"],
-  variable: "--font-arabic",
-  display: "swap",
-  // No Arial-based fallback face: it would also cover Latin and hide JetBrains Mono.
-  adjustFontFallback: false,
-});
+export const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", display: "swap" });

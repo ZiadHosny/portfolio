@@ -14,9 +14,11 @@
 | 8 | Deploy the changes | Change | Todo |
 | 9 | Request Indexing for `/` and `/ar` after deploy | Add | Todo |
 | 10 | Test the share image on opengraph.xyz and LinkedIn Post Inspector | Change | Todo |
-| 11 | Separate pages `/projects` and `/content` instead of one page (with metadata, sitemap, breadcrumbs) | Add | Todo |
-| 12 | A page per System Design episode (summary + embed + `VideoObject`) and an index page | Add | Todo |
-| 13 | Performance: PageSpeed Insights, preloader impact on LCP, image and JS size | Change | Todo |
+| 11 | Separate pages `/projects` and `/content` — on hold: only 4 projects and 1 video, the pages would be thin duplicates of the home page | Add | On hold |
+| 12 | A page per System Design episode (summary + embed + `VideoObject`) and an index page — needs the episode list (title + video link) | Add | Todo |
+| 13 | Performance: stop the English page loading the 120KB Arabic font (fonts 209KB → 87KB) | Change | Done |
+| 13b | Performance: intro counter counts from page load, not from JS boot (mobile LCP ~10.7s → ~8.3s EN, ~7s → ~6.4s AR) | Change | Done |
+| 13c | Performance: decide on the intro (it still keeps mobile LCP above 4s) | Change | Todo |
 | 14 | Visitor analytics (Plausible or Google Analytics) | Add | Todo |
 | 15 | Testimonials section, if available | Add | Todo |
 | 16 | "Copy email" button in the Contact section | Add | Todo |
