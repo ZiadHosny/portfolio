@@ -180,7 +180,7 @@ const ar: typeof en = {
   contact: {
     kicker: "06 / تواصل",
     title: (accent: React.ReactNode) => <>عندك فكرة؟ {accent}</>,
-    accent: "لنبنِها معًا.",
+    accent: "نحوّلها لمنتج حقيقي.",
     body: "نظام Back-end، منتج Full-Stack، أو نقاش عن System Design — يسعدني أن أسمع منك.",
     hello: "تواصل معي",
     resume: "السيرة الذاتية",
